@@ -2382,7 +2382,7 @@ function enviarPedidoPorWhatsapp() {
 
   try {
     const mensajeCodificado = encodeURIComponent(mensaje);
-    const urlWhatsapp = `https://wa.me/5354642589?text=${mensajeCodificado}`;
+    const urlWhatsapp = `https://wa.me/+5354642589?text=${mensajeCodificado}`;
     window.open(urlWhatsapp, "_blank");
     alert("¡Pedido enviado correctamente! Gracias por su compra.");
     cerrarModalPedido();
