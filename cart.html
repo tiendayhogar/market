@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras - Tienda y Hogar</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  
+</head>
+<body>
+  <header class="site-header">
+    <div class="top-bar">
+      <div class="social-icons">
+        <a class="btn-compartir" href="https://www.facebook.com/tuDespensa.25" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a class="btn-compartir" href="https://www.instagram.com/tuDespensa.25" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a class="btn-compartir" href="https://wa.me/5354642589" target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <button class="share-btn" onclick="sharePage()" aria-label="Compartir Página">
+          <i class="fas fa-share-alt"></i>
+        </button>
+      </div>
+    </div>
+    <div class="main-header">
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.svg" alt="Logo de TuDespensa.25"></a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#sobre-Nosotros">Sobre #sobre-Nosotros></li>
+          <li><a href="index.html#info-servicios">Servicios</a></li>
+          <li><a href="index.html#productos">Productos</a></li>
+        </ul>
+      </nav>
+      <div class="header-cart">
+        <a href="cart.html">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="contador-carrito" class="contador-carrito">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+  
+  <main>
+    <div class="container">
+      <h1><i class="fas fa-shopping-cart"></i> Tu Carrito</h1>
+      <div id="items-carrito"></div>
+      <div class="total">
+        <h3>Total: <span id="total-pedido">USD 0.00</span></h3>
+        <button id="pedir-whatsapp">Procesar Pedido</button>
+        <button id="seguir-comprando">
+          <i class="fas fa-shopping-cart"></i> Seguir Comprando
+        </button>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="redes-sociales">
+      <a class="btn-compartir" href="https://www.facebook.com/tuDespensa.25" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="btn-compartir" href="https://www.instagram.com/tuDespensa.25" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a class="btn-compartir" href="https://wa.me/5354642589" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <button class="share-btn btn-compartir" onclick="sharePage()" aria-label="Compartir Página">
+        <i class="fas fa-share-alt"></i>
+      </button>
+    </div>
+    <p>&copy; 2025 Mi Tienda Online</p>
+  </footer>
+  
+  <!-- Modal para procesar pedido -->
+  <div id="modal-pedido" class="modal">
+    <div class="modal-content">
+      <span class="cerrar-modal">&times;</span>
+      <h2>Procesar Pedido</h2>
+      <form id="formulario-pedido">
+        <h3>Información del Comprador</h3>
+        <label for="nombre-comprador">Nombre Completo:</label>
+        <input type="text" id="nombre-comprador" name="nombre-comprador" required>
+  
+        <label for="email-comprador">Correo Electrónico:</label>
+        <input type="email" id="email-comprador" name="email-comprador" required>
+  
+        <label for="telefono-comprador">Número de Teléfono:</label>
+        <input type="tel" id="telefono-comprador" name="telefono-comprador" required>
+  
+        <h3>Información del Beneficiario </h3>
+        <label for="nombre-beneficiario">Nombre Completo:</label>
+        <input type="text" id="nombre-beneficiario" name="nombre-beneficiario">
+  
+        <label for="telefono-beneficiario">Número de Teléfono:</label>
+        <input type="tel" id="telefono-beneficiario" name="telefono-beneficiario">
+  
+        <h3>Información de Envío</h3>
+        <label for="direccion-entrega">Dirección de Entrega:</label>
+        <input type="text" id="direccion-entrega" name="direccion-entrega" required>
+  
+        <label for="nota">Nota (opcional):</label>
+        <textarea id="nota" name="nota" rows="3"></textarea>
+        <label for="metodo-pago">Método de Pago:</label>
+        <!-- Se han agregado las opciones de pago solicitadas -->
+        <select id="metodo-pago" name="metodo-pago" required>
+          <option value="Zelle">Zelle</option>
+         <!-- <option value="Transferencia en CUP">Transferencia en CUP</option>
+          <option value="USD Efectivo">USD Efectivo</option>
+          <option value="CUP Efectivo">CUP Efectivo</option>-->
+        </select>
+        <div id="info-vendedor" style="margin-top: 10px; font-weight: bold; color: #007bff;"></div>
+
+        
+        <button type="submit" class="btn-continuar">Continuar</button>
+      </form>
+    </div>
+  </div>
+  
+  
+  
+  <script>
+// Objeto para gestionar el carrito (versión mejorada)
+const carritoManager = {
+  carrito: [],
+  tasaCambio: 340.0, // Tasa USD a CUP
+  
+  init() {
+    this.cargarCarrito();
+    this.capturarVendedor(); // Añadido para capturar el vendedor
+    this.setupEventListeners();
+    this.renderizarCarrito();
+  },
+  
+  cargarCarrito() {
+    const carritoGuardado = localStorage.getItem('carrito');
+    this.carrito = carritoGuardado ? JSON.parse(carritoGuardado) : [];
+    this.actualizarContador();
+  },
+  
+  guardarCarrito() {
+    localStorage.setItem('carrito', JSON.stringify(this.carrito));
+    this.actualizarContador();
+  },
+  
+  capturarVendedor() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const ref = urlParams.get("ref");
+    if (ref) {
+      localStorage.setItem("vendedor", ref);
+    }
+  },
+  
+  cambiarCantidad(id, delta) {
+    const item = this.carrito.find(item => item.id === id);
+    if (!item) return;
+    
+    item.cantidad += delta;
+    
+    if (item.cantidad < 1) {
+      this.eliminarProducto(id);
+    } else {
+      this.guardarCarrito();
+    }
+    
+    this.renderizarCarrito();
+  },
+  
+  eliminarProducto(id) {
+    this.carrito = this.carrito.filter(item => item.id !== id);
+    this.guardarCarrito();
+    this.renderizarCarrito();
+  },
+  
+  renderizarCarrito() {
+    const container = document.getElementById('items-carrito');
+    const totalElem = document.getElementById('total-pedido');
+    
+    if (!container) return;
+    
+    container.innerHTML = '';
+    
+    if (this.carrito.length === 0) {
+      container.innerHTML = `
+        <div class="carrito-vacio">
+          <i class="fas fa-shopping-cart"></i>
+          <p>Tu carrito está vacío</p>
+        </div>
+      `;
+      if (totalElem) totalElem.textContent = "USD 0.00";
+      
+      // Deshabilitar botón de procesar pedido si el carrito está vacío
+      const btnProcesar = document.getElementById('pedir-whatsapp');
+      if (btnProcesar) btnProcesar.disabled = true;
+      
+      return;
+    }
+    
+    // Habilitar botón de procesar pedido si hay productos
+    const btnProcesar = document.getElementById('pedir-whatsapp');
+    if (btnProcesar) btnProcesar.disabled = false;
+    
+    let total = 0;
+    
+    this.carrito.forEach(item => {
+      const itemElement = document.createElement('div');
+      itemElement.className = 'item-carrito';
+      itemElement.innerHTML = `
+        <img src="images/${item.imagen}" alt="${item.nombre}">
+        <div class="item-info">
+          <h4>${item.nombre}</h4>
+          <p>USD ${item.precio.toFixed(2)} x ${item.cantidad}</p>
+          <p class="subtotal">Subtotal: USD ${(item.precio * item.cantidad).toFixed(2)}</p>
+        </div>
+        <div class="contador-cantidad">
+          <button class="btn-cantidad" data-action="decrease" data-id="${item.id}">-</button>
+          <span class="cantidad">${item.cantidad}</span>
+          <button class="btn-cantidad" data-action="increase" data-id="${item.id}">+</button>
+        </div>
+        <button class="eliminar-item" data-id="${item.id}">
+          <i class="fas fa-trash"></i>
+        </button>
+      `;
+      container.appendChild(itemElement);
+      
+      total += item.precio * item.cantidad;
+    });
+    
+    if (totalElem) {
+      totalElem.textContent = `USD ${total.toFixed(2)}`;
+    }
+  },
+  
+  actualizarContador() {
+    const total = this.carrito.reduce((sum, item) => sum + item.cantidad, 0);
+    const contador = document.getElementById('contador-carrito');
+    if (contador) contador.textContent = total;
+  },
+  
+  validarFormulario() {
+    const nombreComprador = document.getElementById('nombre-comprador').value;
+    const emailComprador = document.getElementById('email-comprador').value;
+    const telefonoComprador = document.getElementById('telefono-comprador').value;
+    const direccionEntrega = document.getElementById('direccion-entrega').value;
+    
+    if (!nombreComprador || !emailComprador || !telefonoComprador || !direccionEntrega) {
+      alert('Por favor, complete todos los campos obligatorios.');
+      return false;
+    }
+
+    if (!/^\d{8,10}$/.test(telefonoComprador)) {
+      alert('El número de teléfono no es válido. Debe tener 8 a 10 dígitos.');
+      return false;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailComprador)) {
+      alert('El correo electrónico no es válido.');
+      return false;
+    }
+
+    return true;
+  },
+  
+  procesarPedido() {
+    // Validar que el carrito no esté vacío
+    if (this.carrito.length === 0) {
+      alert('No puedes procesar un pedido vacío. Agrega productos al carrito primero.');
+      return;
+    }
+    
+    // Validación de campos obligatorios
+    if (!this.validarFormulario()) {
+      return;
+    }
+
+    // Obtener datos del formulario
+    const nombreComprador = document.getElementById('nombre-comprador').value;
+    const emailComprador = document.getElementById('email-comprador').value;
+    const telefonoComprador = document.getElementById('telefono-comprador').value;
+    const direccionEntrega = document.getElementById('direccion-entrega').value;
+    const nota = document.getElementById('nota').value;
+    const nombreBeneficiario = document.getElementById('nombre-beneficiario').value;
+    const telefonoBeneficiario = document.getElementById('telefono-beneficiario').value;
+    const metodoPago = document.getElementById('metodo-pago').value;
+    const totalOriginal = this.carrito.reduce((sum, item) => sum + (item.precio * item.cantidad), 0);
+let descuento = 0;
+let totalConDescuento = totalOriginal;
+
+// Aplicar descuento si la fecha está entre hoy y el 15 de junio
+const hoy = new Date();
+const fechaLimite = new Date('2025-06-15');
+if (hoy <= fechaLimite) {
+  descuento = totalOriginal * 0.06;
+  totalConDescuento = totalOriginal - descuento;
+}
+
+    // Construir mensaje
+    let mensaje = `Nuevo Pedido\n\n`;
+    mensaje += `Datos del Comprador:\n\n`;
+    mensaje += `• Nombre: ${nombreComprador}\n`;
+    mensaje += `• Email: ${emailComprador}\n`;
+    mensaje += `• Teléfono: ${telefonoComprador}\n\n`;
+
+    if (nombreBeneficiario && telefonoBeneficiario) {
+      mensaje += `Datos del Beneficiario:\n\n`;
+      mensaje += `• Nombre: ${nombreBeneficiario}\n`;
+      mensaje += `• Teléfono: ${telefonoBeneficiario}\n\n`;
+    }
+
+    mensaje += `Información de Envío:\n\n`;
+    mensaje += `• Dirección: ${direccionEntrega}\n`;
+    if (nota) {
+      mensaje += `• Nota: ${nota}\n`;
+    }
+    mensaje += `• Método de Pago: ${metodoPago}\n\n`;
+
+    // Incluir vendedor si existe
+   const vendedor = obtenerVendedorDesdeURL();
+if (vendedor) {
+  mensaje += `Vendedor: ${vendedor}\n\n`;
+} else {
+  mensaje += `Vendedor: No especificado\n\n`;
+}
+
+
+
+    mensaje += `Información de Pago:\n`;
+    mensaje += `Total sin descuento: ${totalOriginal.toFixed(2)} USD\n`;
+
+if (descuento > 0) {
+  mensaje += `🎉 Descuento Día de los Padres (6%): -${descuento.toFixed(2)} USD\n`;
+  mensaje += `💰 Total a pagar con descuento: ${totalConDescuento.toFixed(2)} USD\n`;
+  mensaje += `*Promoción válida hasta el 15 de junio por el Día de los Padres.*\n\n`;
+} else {
+  mensaje += `Total a pagar: ${totalOriginal.toFixed(2)} USD\n`;
+}
+    mensaje += `Por favor en minutos recibirá la cuenta a transferir realice la transferencia y envíe el comprobante por este medio.\n\n`;
+    mensaje += `Productos:\n\n`;
+    
+    this.carrito.forEach(prod => {
+      mensaje += `• ${prod.cantidad}x ${prod.nombre} - ${(prod.precio * prod.cantidad).toFixed(2)} USD\n`;
+    });
+
+    mensaje += `\nTotal a Pagar: ${totalConDescuento.toFixed(2)} USD\n`;
+mensaje += `⏱️ Tiempo estimado de entrega: de 24 a 48 horas (siempre trataremos que sea el mismo día).`;
+
+    try {
+      // Abrir WhatsApp con el mensaje
+      const urlWhatsapp = `https://wa.me/5354642589?text=${encodeURIComponent(mensaje)}`;
+      window.open(urlWhatsapp, '_blank');
+      
+      // Mostrar confirmación
+      alert('¡Pedido enviado correctamente! Gracias por su compra.');
+      
+      // Limpiar y cerrar
+      this.limpiarYCerrar();
+    } catch (error) {
+      console.error('Error al enviar el pedido:', error);
+      alert('Hubo un error al procesar su pedido. Por favor, intente de nuevo.');
+    }
+  },
+
+  limpiarYCerrar() {
+    // Limpiar carrito
+    this.carrito = [];
+    this.guardarCarrito();
+    this.renderizarCarrito();
+    
+    // Cerrar modal
+    document.getElementById('modal-pedido').style.display = 'none';
+    
+    // Limpiar formulario
+    document.getElementById('formulario-pedido').reset();
+  },
+  
+  setupEventListeners() {
+    // Event delegation para toda la página
+    document.addEventListener('click', (e) => {
+      // Botones de cantidad
+      if (e.target.closest('.btn-cantidad')) {
+        const button = e.target.closest('.btn-cantidad');
+        const id = parseInt(button.dataset.id);
+        const action = button.dataset.action;
+        
+        if (action === 'increase') {
+          this.cambiarCantidad(id, 1);
+        } else if (action === 'decrease') {
+          this.cambiarCantidad(id, -1);
+        }
+        return;
+      }
+      
+      // Botones de eliminar
+      if (e.target.closest('.eliminar-item')) {
+        const button = e.target.closest('.eliminar-item');
+        const id = parseInt(button.dataset.id);
+        this.eliminarProducto(id);
+        return;
+      }
+      
+      // Botón de procesar pedido
+      if (e.target.closest('#pedir-whatsapp')) {
+        e.preventDefault();
+        const vendedor = localStorage.getItem("vendedor");
+const infoVendedorElem = document.getElementById("info-vendedor");
+
+if (vendedor && infoVendedorElem) {
+  infoVendedorElem.textContent = `Pedido referido por: ${vendedor}`;
+} else if (infoVendedorElem) {
+  infoVendedorElem.textContent = `Pedido sin referencia de vendedor.`;
+}
+
+        // Validar que el carrito no esté vacío
+        if (this.carrito.length === 0) {
+          alert('No puedes procesar un pedido vacío. Agrega productos al carrito primero.');
+          return;
+        }
+
+        document.getElementById('modal-pedido').style.display = 'block';
+        return;
+      }
+      
+      // Botón de seguir comprando
+      if (e.target.closest('#seguir-comprando')) {
+        window.location.href = 'index.html';
+        return;
+      }
+      
+      // Cerrar modal
+      if (e.target.closest('.cerrar-modal') || e.target === document.getElementById('modal-pedido')) {
+        document.getElementById('modal-pedido').style.display = 'none';
+        return;
+      }
+    });
+    
+    // Formulario de pedido
+    document.getElementById('formulario-pedido')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      this.procesarPedido();
+    });
+  }
+};
+
+// Inicializar cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+  carritoManager.init();
+});
+</script>
+</body>
+</html>

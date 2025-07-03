@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda y Hogar</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="main-header">
+      <button class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="logo">
+        <a href="index.html">
+          <!-- Aquí va tu logo si lo tienes -->
+        </a>
+      </div>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-Nosotros">Sobre Nosotros</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#ofertas">Ofertas</a></li>
+          <li><a href="#productos-recientes">Nuevo</a></li>
+        </ul>
+      </nav>
+      <div class="header-location">
+      <button id="cambiar-ubicacion">
+        <i class="fas fa-map-marker-alt"></i>
+        <span id="ubicacion-actual">Seleccionar ubicación</span>
+      </button>
+    </div>
+      <div class="header-cart">
+        <a href="cart.html">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="contador-carrito" class="contador-carrito">0</span>
+        </a>
+      </div>
+      
+    </div>
+  </header>
+  
+ <div class="banner-container">
+  <!-- Banner 1 -->
+  <div class="banner-slide active">
+    <picture>
+      <source media="(max-width: 768px)" srcset="images/banner17m.png">
+      <img src="images/banner17.png" alt="Banner 1">
+    </picture>
+    <a href="#producto-112" class="banner-btn">Comprar Ahora</a>
+  </div>
+
+  <!-- Banner 2 -->
+  <div class="banner-slide">
+    <picture>
+      <source media="(max-width: 768px)" srcset="images/banner14m.png">
+      <img src="images/banner14.png" alt="Banner 2">
+    </picture>
+    <a href="#producto-113" class="banner-btn">Comprar Ahora</a>
+  </div>
+
+  <!-- Banner 3 -->
+  <div class="banner-slide">
+    <picture>
+      <source media="(max-width: 768px)" srcset="images/banner15m.png">
+      <img src="images/banner15.png" alt="Banner 3">
+    </picture>
+    <a href="#ofertas" class="banner-btn">Ver Ofertas</a>
+  </div>
+
+  <!-- Banner 4 -->
+  <div class="banner-slide">
+    <picture>
+      <source media="(max-width: 768px)" srcset="images/banner16m.png">
+      <img src="images/banner16.png" alt="Banner 4">
+    </picture>
+    <a href="#productos" class="banner-btn">Explorar </a>
+  </div>
+
+  <!-- Flechas -->
+  <a class="banner-prev" onclick="changeSlide(-1)">❮</a>
+  <a class="banner-next" onclick="changeSlide(1)">❯</a>
+
+  <!-- Indicadores -->
+  <div class="banner-indicators">
+    <span class="dot active" onclick="goToSlide(0)"></span>
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+    <span class="dot" onclick="goToSlide(3)"></span>
+  </div>
+</div>
+  
+  <section id="sobre-mi">
+    <div class="seccion-titulo">
+      <h2>Bienvenidos Somos Tienda y Hogar</h2>
+    </div>
+    <p>Donde nuestro objetivo es que usted alcance su máxima satisfacción y la de su familia.</p>
+    <div class="cajas-informativas">
+      <div class="caja">
+        <i class="fas fa-certificate icono"></i>
+        <h3>Calidad Garantizada</h3>
+        <p>Si buscas productos de calidad a precios accesibles, ¡has llegado al lugar indicado!.</p>
+      </div>
+      <div class="caja">
+        <i class="fas fa-shipping-fast icono"></i>
+        <h3>Envíos Rápidos</h3>
+        <p>Entregamos en tiempo récord, asegurando que tu pedido llegue sin demoras.</p>
+      </div>
+      <div class="caja">
+        <i class="fas fa-headset icono"></i>
+        <h3>Atención Personalizada</h3>
+        <p>Brindamos soporte y atención al cliente para resolver cualquier duda o inquietud.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="combos-temporales" class="combos-container">
+    <div class="seccion-titulo">
+      <h2>Combos Temporales </h2>
+    </div>
+    <p class="combos-description">Descubre nuestras ofertas especiales por tiempo limitado.</p>
+    <div class="productos-recientes-container" id="combos-temporales-container"></div>
+  </section>
+
+  <section id="ofertas">
+    <div class="seccion-titulo">
+      <h2>OFERTAS ESPECIALES</h2>
+    </div>
+    <div class="ofertas-container"></div>
+  </section>
+  
+  <section id="productos-recientes">
+    <div class="seccion-titulo">
+      <h2>Productos de Recién incorporación</h2>
+    </div>
+    <div class="productos-recientes-container"></div>
+  </section>
+
+  <section id="productos">
+    <div class="seccion-titulo">
+      <h2>Nuestros Productos</h2>
+    </div>
+    <div class="filtros">
+      <button class="filtro-btn active" data-categoria="todas">Todas</button>
+      <button class="filtro-btn De-Electrodom-sticos" data-categoria="De Electrodomésticos">De Electrodomésticos</button>
+      <button class="filtro-btn Alimentos-C-rnicos" data-categoria="Alimentos/Cárnicos">Alimentos/Cárnicos</button>
+      <button class="filtro-btn Alimentos-L-cteos" data-categoria="Alimentos/Lácteos">Alimentos/Lácteos</button>
+      <button class="filtro-btn Alimentos-L-quidos" data-categoria="Alimentos/Líquidos">Alimentos/Líquidos</button>
+      <button class="filtro-btn Alimentos-Del-Confi" data-categoria="Alimentos/Del Confi">Alimentos/Del Confi</button>
+      <button class="filtro-btn Alimentos-Del-Agro" data-categoria="Alimentos/Del Agro">Alimentos/Del Agro</button>
+      <button class="filtro-btn Alimentos-Otros" data-categoria="Alimentos/Otros">Alimentos/Otros</button>
+      <button class="filtro-btn Del-Hogar" data-categoria="Del Hogar">Del Hogar</button>
+    </div>
+    <div class="productos-container" id="productos-container"></div>
+    <div class="descripcion-flotante"></div>
+  </section>
+
+  <div class="boton-flotante-whatsapp">
+    <a href="https://wa.me/5354642589" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  
+
+  <section id="testimonios">
+    <div class="seccion-titulo">
+      <h2>Lo que dicen nuestros clientes</h2>
+    </div>
+    <div class="testimonios-container">
+      <div class="testimonio">
+        <p class="comentario">"Excelente servicio, los productos llegaron en perfecto estado y a tiempo."</p>
+        <h4>- Emir De Armas</h4>
+      </div>
+      <div class="testimonio">
+        <p class="comentario">"Buena calidad y atención al cliente. ¡Recomendado!"</p>
+        <h4>- Carlos Pérez</h4>
+      </div>
+      <div class="testimonio">
+        <p class="comentario">"Siempre encuentro lo que necesito y a buen precio."</p>
+        <h4>- Laura Gómez</h4>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h3>Tienda y Hogar</h3>
+          <p class="text-gray-400">Tu mercado en línea que te ofrece calidad y ahorro en cada compra .</p>
+        </div>
+        <div class="footer-links">
+          <h4>Enlaces Rápidos</h4>
+          <ul class="footer-links-list">
+            <li><a href="#inicio" class="text-gray-400 hover:text-white">Inicio</a></li>
+            <li><a href="#sobre-Nosotros" class="text-gray-400 hover:text-white">Sobre Nosotros</a></li>
+            <li><a href="#testimonios" class="text-gray-400 hover:text-white">Testimonios</a></li>
+            <li><a href="#productos" class="text-gray-400 hover:text-white">Productos</a></li>
+            <li><a href="#ofertas" class="text-gray-400 hover:text-white">Ofertas</a></li>
+            <li><a href="#productos-recientes" class="text-gray-400 hover:text-white">Nuevo</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <div class="footer-contact-info">
+            <p><i class="fas fa-phone mr-2"></i> +5354642589</p>
+          </div>
+        </div>
+        <div class="footer-social">
+          <h4>Síguenos</h4>
+          <div class="footer-social-icons">
+            <a href="https://www.facebook.com/tuDespensa.25" target="_blank" class="text-gray-400 hover:text-white text-xl">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/tuDespensa.25" target="_blank" class="text-gray-400 hover:text-white text-xl">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/5354642589" target="_blank" class="text-gray-400 hover:text-white text-xl">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Tienda y Hogar. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+  
+
+<!-- Modal para mostrar información del producto -->
+<div id="modal-descripcion" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img id="modal-imagen" src="" alt="Imagen del producto" style="max-width: 100%; border-radius: 10px; margin-bottom: 10px;">
+    <h3 class="modal-nombre"></h3>
+    <p class="modal-descripcion"></p>
+    <button id="btn-add-modal" class="btn-add-to-cart">Añadir al carrito</button>
+  </div>
+</div>
+
+</body>
+</html>
