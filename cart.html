@@ -1,154 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras - Tienda y Hogar</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .carrito-container {
-            padding: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        table th, table td {
-            padding: 12px;
-            border: 1px solid #ccc;
-            text-align: center;
-        }
-        .total {
-            font-size: 1.2em;
-            text-align: right;
-            margin-top: 20px;
-        }
-        .btn-enviar {
-            display: block;
-            margin-top: 20px;
-            padding: 12px 24px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            font-size: 1em;
-            cursor: pointer;
-        }
-        .btn-enviar:hover {
-            background-color: #218838;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito de Compras | Tienda y Hogar</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="carrito-container">
-        <h1>Tu Carrito</h1>
-        <table id="cart-table">
-            <thead>
-                <tr>
-                    <th>Producto</th>
-                    <th>Precio</th>
-                    <th>Cantidad</th>
-                    <th>Total</th>
-                    <th>Eliminar</th>
-                </tr>
-            </thead>
-            <tbody id="cart-body">
-                <!-- Productos se cargarán aquí -->
-            </tbody>
-        </table>
-        <div class="total" id="cart-total">Total: $0.00</div>
-        <button class="btn-enviar" onclick="enviarPedido()">Enviar pedido por WhatsApp</button>
-    </div>
 
-    <script>
-        function cargarCarrito() {
-            const cart = JSON.parse(localStorage.getItem('carrito')) || [];
-            const tbody = document.getElementById('cart-body');
-            const totalDiv = document.getElementById('cart-total');
-            tbody.innerHTML = '';
-            let total = 0;
+  <header>
+    <h1>Carrito de Compras</h1>
+    <a href="index.html">← Seguir comprando</a>
+  </header>
 
-            cart.forEach((item, index) => {
-                const row = document.createElement('tr');
+  <main>
+    <section id="cart-container">
+      <table id="cart-table">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+        <tbody id="cart-body">
+          <!-- Aquí se agregan los productos -->
+        </tbody>
+      </table>
 
-                const celdaNombre = document.createElement('td');
-                celdaNombre.textContent = item.nombre;
-                row.appendChild(celdaNombre);
+      <div id="total-container">
+        <h3>Total: $<span id="cart-total">0.00</span></h3>
+        <button id="send-whatsapp">Continuar por WhatsApp</button>
+      </div>
+    </section>
+  </main>
 
-                const celdaPrecio = document.createElement('td');
-                celdaPrecio.textContent = `$${item.precio.toFixed(2)}`;
-                row.appendChild(celdaPrecio);
+  <footer>
+    <p>&copy; 2025 Tienda y Hogar</p>
+  </footer>
 
-                const celdaCantidad = document.createElement('td');
-                const inputCantidad = document.createElement('input');
-                inputCantidad.type = 'number';
-                inputCantidad.min = '1';
-                inputCantidad.value = item.cantidad;
-                inputCantidad.onchange = () => actualizarCantidad(index, parseInt(inputCantidad.value));
-                celdaCantidad.appendChild(inputCantidad);
-                row.appendChild(celdaCantidad);
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartBody = document.getElementById('cart-body');
+      const cartTotal = document.getElementById('cart-total');
 
-                const subtotal = item.precio * item.cantidad;
-                total += subtotal;
+      function renderCart() {
+        cartBody.innerHTML = '';
+        let total = 0;
 
-                const celdaSubtotal = document.createElement('td');
-                celdaSubtotal.textContent = `$${subtotal.toFixed(2)}`;
-                row.appendChild(celdaSubtotal);
+        cart.forEach((item, index) => {
+          const subtotal = item.precio * item.cantidad;
+          total += subtotal;
 
-                const celdaEliminar = document.createElement('td');
-                const btnEliminar = document.createElement('button');
-                btnEliminar.textContent = 'Eliminar';
-                btnEliminar.onclick = () => eliminarProducto(index);
-                celdaEliminar.appendChild(btnEliminar);
-                row.appendChild(celdaEliminar);
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${item.nombre}</td>
+            <td>$${item.precio.toFixed(2)}</td>
+            <td>
+              <input type="number" min="1" value="${item.cantidad}" data-index="${index}" class="quantity-input"/>
+            </td>
+            <td>$${subtotal.toFixed(2)}</td>
+            <td><button class="delete-btn" data-index="${index}">🗑️</button></td>
+          `;
+          cartBody.appendChild(row);
+        });
 
-                tbody.appendChild(row);
-            });
+        cartTotal.textContent = total.toFixed(2);
+      }
 
-            totalDiv.textContent = `Total: $${total.toFixed(2)}`;
+      // Actualizar cantidad
+      cartBody.addEventListener('change', function (e) {
+        if (e.target.classList.contains('quantity-input')) {
+          const index = e.target.getAttribute('data-index');
+          const nuevaCantidad = parseInt(e.target.value);
+          if (nuevaCantidad >= 1) {
+            cart[index].cantidad = nuevaCantidad;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+          }
+        }
+      });
+
+      // Eliminar producto
+      cartBody.addEventListener('click', function (e) {
+        if (e.target.classList.contains('delete-btn')) {
+          const index = e.target.getAttribute('data-index');
+          cart.splice(index, 1);
+          localStorage.setItem('cart', JSON.stringify(cart));
+          renderCart();
+        }
+      });
+
+      // Enviar pedido por WhatsApp
+      document.getElementById('send-whatsapp').addEventListener('click', function () {
+        if (cart.length === 0) {
+          alert('El carrito está vacío.');
+          return;
         }
 
-        function actualizarCantidad(index, nuevaCantidad) {
-            const cart = JSON.parse(localStorage.getItem('carrito')) || [];
-            cart[index].cantidad = nuevaCantidad > 0 ? nuevaCantidad : 1;
-            localStorage.setItem('carrito', JSON.stringify(cart));
-            cargarCarrito();
-        }
+        let mensaje = '¡Hola! Me gustaría hacer el siguiente pedido:%0A';
+        cart.forEach(item => {
+          mensaje += `🛒 ${item.nombre} x${item.cantidad} - $${(item.precio * item.cantidad).toFixed(2)}%0A`;
+        });
+        mensaje += `🔢 Total: $${cart.reduce((t, i) => t + i.precio * i.cantidad, 0).toFixed(2)}%0A`;
+        mensaje += 'Gracias.';
 
-        function eliminarProducto(index) {
-            const cart = JSON.parse(localStorage.getItem('carrito')) || [];
-            cart.splice(index, 1);
-            localStorage.setItem('carrito', JSON.stringify(cart));
-            cargarCarrito();
-        }
+        const numero = '5351234567'; // Reemplaza con tu número real
+        const url = `https://wa.me/${numero}?text=${mensaje}`;
+        window.open(url, '_blank');
+      });
 
-        function enviarPedido() {
-            const cart = JSON.parse(localStorage.getItem('carrito')) || [];
-            if (cart.length === 0) {
-                alert('Tu carrito está vacío.');
-                return;
-            }
+      renderCart();
+    });
+  </script>
 
-            let mensaje = 'Hola, quiero hacer un pedido:%0A';
-            let total = 0;
-
-            cart.forEach(item => {
-                const subtotal = item.precio * item.cantidad;
-                mensaje += `🛒 *${item.nombre}* - Cant: ${item.cantidad} - Subtotal: $${subtotal.toFixed(2)}%0A`;
-                total += subtotal;
-            });
-
-            mensaje += `%0A💵 *Total: $${total.toFixed(2)}*`;
-            const numeroWhatsApp = '5355555555'; // Reemplaza con tu número
-            const url = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
-            window.open(url, '_blank');
-        }
-
-        window.onload = cargarCarrito;
-    </script>
 </body>
 </html>
