@@ -3,119 +3,158 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Carrito de Compras | Tienda y Hogar</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* Estilos del carrito */
+    .cart-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: #fdfdfd;
+    }
+
+    .cart-title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+
+    .item-name {
+      flex: 2;
+    }
+
+    .item-price,
+    .item-quantity {
+      flex: 1;
+      text-align: center;
+    }
+
+    .item-quantity input {
+      width: 50px;
+      padding: 4px;
+      text-align: center;
+    }
+
+    .cart-total {
+      text-align: right;
+      margin-top: 20px;
+      font-size: 20px;
+    }
+
+    #checkout-btn {
+      margin-top: 30px;
+      display: block;
+      width: 100%;
+      padding: 15px;
+      background: #25d366;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    #checkout-btn:hover {
+      background: #1ebe5d;
+    }
+  </style>
 </head>
 <body>
-
-  <header>
-    <h1>Carrito de Compras</h1>
-    <a href="index.html">← Seguir comprando</a>
-  </header>
-
-  <main>
-    <section id="cart-container">
-      <table id="cart-table">
-        <thead>
-          <tr>
-            <th>Producto</th>
-            <th>Precio</th>
-            <th>Cantidad</th>
-            <th>Subtotal</th>
-            <th>Eliminar</th>
-          </tr>
-        </thead>
-        <tbody id="cart-body">
-          <!-- Aquí se agregan los productos -->
-        </tbody>
-      </table>
-
-      <div id="total-container">
-        <h3>Total: $<span id="cart-total">0.00</span></h3>
-        <button id="send-whatsapp">Continuar por WhatsApp</button>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Tienda y Hogar</p>
-  </footer>
+  <div class="cart-container">
+    <h1 class="cart-title">Carrito de Compras</h1>
+    <div id="cart-items"></div>
+    <div class="cart-total">Total: <span id="cart-total">0</span> CUP</div>
+    <button id="checkout-btn">Continuar</button>
+  </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const cart = JSON.parse(localStorage.getItem('cart')) || [];
-      const cartBody = document.getElementById('cart-body');
-      const cartTotal = document.getElementById('cart-total');
+    // Obtener elementos del DOM
+    const cartItemsContainer = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+    const checkoutBtn = document.getElementById('checkout-btn');
 
-      function renderCart() {
-        cartBody.innerHTML = '';
-        let total = 0;
+    // Recuperar carrito del localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        cart.forEach((item, index) => {
-          const subtotal = item.precio * item.cantidad;
-          total += subtotal;
+    // Renderizar productos en el carrito
+    function renderCart() {
+      cartItemsContainer.innerHTML = '';
+      let total = 0;
 
-          const row = document.createElement('tr');
-          row.innerHTML = `
-            <td>${item.nombre}</td>
-            <td>$${item.precio.toFixed(2)}</td>
-            <td>
-              <input type="number" min="1" value="${item.cantidad}" data-index="${index}" class="quantity-input"/>
-            </td>
-            <td>$${subtotal.toFixed(2)}</td>
-            <td><button class="delete-btn" data-index="${index}">🗑️</button></td>
-          `;
-          cartBody.appendChild(row);
-        });
+      cart.forEach((item, index) => {
+        const itemElement = document.createElement('div');
+        itemElement.className = 'cart-item';
 
-        cartTotal.textContent = total.toFixed(2);
-      }
+        itemElement.innerHTML = `
+          <div class="item-name">${item.nombre}</div>
+          <div class="item-price">${item.precio} CUP</div>
+          <div class="item-quantity">
+            <input type="number" value="${item.cantidad}" min="1" data-index="${index}" />
+          </div>
+        `;
 
-      // Actualizar cantidad
-      cartBody.addEventListener('change', function (e) {
-        if (e.target.classList.contains('quantity-input')) {
-          const index = e.target.getAttribute('data-index');
-          const nuevaCantidad = parseInt(e.target.value);
-          if (nuevaCantidad >= 1) {
-            cart[index].cantidad = nuevaCantidad;
+        cartItemsContainer.appendChild(itemElement);
+        total += item.precio * item.cantidad;
+      });
+
+      cartTotal.textContent = total.toFixed(2);
+      updateQuantityListeners();
+    }
+
+    // Escuchar cambios en cantidades
+    function updateQuantityListeners() {
+      const inputs = document.querySelectorAll('.item-quantity input');
+      inputs.forEach(input => {
+        input.addEventListener('input', function () {
+          const index = this.getAttribute('data-index');
+          const newQuantity = parseInt(this.value);
+
+          if (!isNaN(newQuantity) && newQuantity > 0) {
+            cart[index].cantidad = newQuantity;
             localStorage.setItem('cart', JSON.stringify(cart));
             renderCart();
           }
-        }
-      });
-
-      // Eliminar producto
-      cartBody.addEventListener('click', function (e) {
-        if (e.target.classList.contains('delete-btn')) {
-          const index = e.target.getAttribute('data-index');
-          cart.splice(index, 1);
-          localStorage.setItem('cart', JSON.stringify(cart));
-          renderCart();
-        }
-      });
-
-      // Enviar pedido por WhatsApp
-      document.getElementById('send-whatsapp').addEventListener('click', function () {
-        if (cart.length === 0) {
-          alert('El carrito está vacío.');
-          return;
-        }
-
-        let mensaje = '¡Hola! Me gustaría hacer el siguiente pedido:%0A';
-        cart.forEach(item => {
-          mensaje += `🛒 ${item.nombre} x${item.cantidad} - $${(item.precio * item.cantidad).toFixed(2)}%0A`;
         });
-        mensaje += `🔢 Total: $${cart.reduce((t, i) => t + i.precio * i.cantidad, 0).toFixed(2)}%0A`;
-        mensaje += 'Gracias.';
+      });
+    }
 
-        const numero = '5351234567'; // Reemplaza con tu número real
-        const url = `https://wa.me/${numero}?text=${mensaje}`;
-        window.open(url, '_blank');
+    // Enviar pedido por WhatsApp
+    checkoutBtn.addEventListener('click', () => {
+      if (cart.length === 0) {
+        alert('El carrito está vacío.');
+        return;
+      }
+
+      let message = '¡Hola! Me gustaría hacer el siguiente pedido:\n\n';
+      cart.forEach(item => {
+        message += `🛒 ${item.nombre} - ${item.cantidad} x ${item.precio} CUP = ${item.cantidad * item.precio} CUP\n`;
       });
 
-      renderCart();
-    });
-  </script>
+      const total = cart.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
+      message += `\n💵 Total: ${total.toFixed(2)} CUP`;
 
+      const phone = '54642589'; // Reemplaza con tu número real
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+      window.open(url, '_blank');
+    });
+
+    renderCart();
+  </script>
 </body>
 </html>
