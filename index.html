@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda y Hogar</title>
+  <title>Tienda Online - TuDespensa.25</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <header class="site-header">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <div class="main-header">
       <button class="hamburger" onclick="toggleMenu()">
         <i class="fas fa-bars"></i>
@@ -21,7 +22,7 @@
       <nav class="main-nav" id="main-nav">
         <ul>
           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#sobre-Nosotros">Sobre Nosotros</a></li>
+           <!--<li><a href="#sobre-mi">Sobre Mí</a></li> -->
           <li><a href="#testimonios">Testimonios</a></li>
           <li><a href="#productos">Productos</a></li>
           <li><a href="#ofertas">Ofertas</a></li>
@@ -48,7 +49,7 @@
   <!-- Banner 1 -->
   <div class="banner-slide active">
     <picture>
-      <source media="(max-width: 768px)" srcset="images/banner17m.png">
+      <source media="(max-width: 768px)" srcset="images/banner17.m.png">
       <img src="images/banner17.png" alt="Banner 1">
     </picture>
     <a href="#producto-112" class="banner-btn">Comprar Ahora</a>
@@ -93,17 +94,21 @@
     <span class="dot" onclick="goToSlide(3)"></span>
   </div>
 </div>
-  
-  <section id="sobre-mi">
+  <input type="text" id="busqueda-productos" placeholder="Buscar productos..." class="form-control">
+  <div id="resultados-busqueda-container" class="hidden">
+  <h3 class="titulo-resultados">Resultados de la búsqueda</h3>
+  <div id="resultados-busqueda" class="productos-container"></div>
+</div>
+ <!-- <section id="sobre-mi">
     <div class="seccion-titulo">
-      <h2>Bienvenidos Somos Tienda y Hogar</h2>
+      <h2>Bienvenidos Somos TuDespensa.25</h2>
     </div>
     <p>Donde nuestro objetivo es que usted alcance su máxima satisfacción y la de su familia.</p>
     <div class="cajas-informativas">
       <div class="caja">
         <i class="fas fa-certificate icono"></i>
         <h3>Calidad Garantizada</h3>
-        <p>Si buscas productos de calidad a precios accesibles, ¡has llegado al lugar indicado!.</p>
+        <p>Ofrecemos productos de alta calidad con los mejores materiales y fabricación.</p>
       </div>
       <div class="caja">
         <i class="fas fa-shipping-fast icono"></i>
@@ -116,15 +121,16 @@
         <p>Brindamos soporte y atención al cliente para resolver cualquier duda o inquietud.</p>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <section id="combos-temporales" class="combos-container">
-    <div class="seccion-titulo">
-      <h2>Combos Temporales </h2>
-    </div>
-    <p class="combos-description">Descubre nuestras ofertas especiales por tiempo limitado.</p>
-    <div class="productos-recientes-container" id="combos-temporales-container"></div>
-  </section>
+  
+  
+  <div class="productos-recientes-container" id="combos-temporales-container">
+    <!-- Los combos se insertarán aquí dinámicamente -->
+  </div>
+  
+  
+</section>
 
   <section id="ofertas">
     <div class="seccion-titulo">
@@ -140,27 +146,82 @@
     <div class="productos-recientes-container"></div>
   </section>
 
-  <section id="productos">
-    <div class="seccion-titulo">
-      <h2>Nuestros Productos</h2>
+  <!-- Reemplaza la sección de productos actual con esta estructura -->
+<section id="productos">
+  <div class="seccion-titulo">
+    <h2>Nuestros Productos</h2>
+  </div>
+  
+  <div class="menu-container">
+    <!-- Barra lateral de categorías -->
+    <div class="menu-categories">
+      <div class="category active" data-category="todas">
+        <i class="fas fa-home"></i>
+        <span>Todas</span>
+      </div>
+      <div class="category" data-category="De Electrodomésticos">
+        <i class="fas fa-plug"></i>
+        <span>Electrodomésticos</span>
+      </div>
+      <div class="category" data-category="Alimentos/Cárnicos">
+        <i class="fas fa-drumstick-bite"></i>
+        <span>Cárnicos</span>
+      </div>
+      <div class="category" data-category="Alimentos/Lácteos">
+        <i class="fas fa-cheese"></i>
+        <span>Lácteos</span>
+      </div>
+      <div class="category" data-category="Alimentos/Líquidos">
+        <i class="fas fa-wine-bottle"></i>
+        <span>Bebidas</span>
+      </div>
+      <div class="category" data-category="Granos">
+  <i class="fas fa-seedling"></i> <!-- Ícono de granos -->
+  <span>Granos</span>
+</div>
+      <div class="category" data-category="Alimentos/Del Confi">
+        <i class="fas fa-cookie"></i>
+        <span>Confitería</span>
+      </div>
+      <div class="category" data-category="Alimentos/Del Agro">
+        <i class="fas fa-carrot"></i>
+        <span>Agrito TuDespensa.25</span>
+      </div>
+      <div class="category" data-category="Aderezo y condimentos">
+  <i class="fas fa-mortar-pestle"></i>
+  <span>Aderezos y Condimentos</span>
+</div>
+
+<div class="category" data-category="Enlatados y conservas">
+ <i class="fas fa-fish"></i>
+  <span>Enlatados</span>
+</div>
+
+<div class="category" data-category="Licoreria">
+  <i class="fas fa-glass-whiskey"></i>
+  <span>Licorería</span>
+</div>
+
+<div class="category" data-category="Productos mixtos">
+  <i class="fas fa-box-open"></i>
+  <span>Productos Mixtos</span>
+</div>
+     
+      <div class="category" data-category="Del Hogar">
+        <i class="fas fa-home"></i>
+        <span>Hogar</span>
+      </div>
     </div>
-    <div class="filtros">
-      <button class="filtro-btn active" data-categoria="todas">Todas</button>
-      <button class="filtro-btn De-Electrodom-sticos" data-categoria="De Electrodomésticos">De Electrodomésticos</button>
-      <button class="filtro-btn Alimentos-C-rnicos" data-categoria="Alimentos/Cárnicos">Alimentos/Cárnicos</button>
-      <button class="filtro-btn Alimentos-L-cteos" data-categoria="Alimentos/Lácteos">Alimentos/Lácteos</button>
-      <button class="filtro-btn Alimentos-L-quidos" data-categoria="Alimentos/Líquidos">Alimentos/Líquidos</button>
-      <button class="filtro-btn Alimentos-Del-Confi" data-categoria="Alimentos/Del Confi">Alimentos/Del Confi</button>
-      <button class="filtro-btn Alimentos-Del-Agro" data-categoria="Alimentos/Del Agro">Alimentos/Del Agro</button>
-      <button class="filtro-btn Alimentos-Otros" data-categoria="Alimentos/Otros">Alimentos/Otros</button>
-      <button class="filtro-btn Del-Hogar" data-categoria="Del Hogar">Del Hogar</button>
+    
+    <!-- Contenido principal del menú -->
+    <div class="menu-content">
+      <div class="productos-container" id="productos-container"></div>
     </div>
-    <div class="productos-container" id="productos-container"></div>
-    <div class="descripcion-flotante"></div>
-  </section>
+  </div>
+</section>
 
   <div class="boton-flotante-whatsapp">
-    <a href="https://wa.me/+5354642589" target="_blank">
+    <a href="https://wa.me/5353933247" target="_blank">
       <i class="fab fa-whatsapp"></i>
     </a>
   </div>
@@ -191,14 +252,14 @@
     <div class="footer-container">
       <div class="footer-grid">
         <div class="footer-about">
-          <h3>Tienda y Hogar</h3>
-          <p class="text-gray-400">Tu mercado en línea que te ofrece calidad y ahorro en cada compra .</p>
+          <h3>TuDespensa.25</h3>
+          <p class="text-gray-400">Tu mercado digital de confianza con los mejores productos y ofertas.</p>
         </div>
         <div class="footer-links">
           <h4>Enlaces Rápidos</h4>
           <ul class="footer-links-list">
             <li><a href="#inicio" class="text-gray-400 hover:text-white">Inicio</a></li>
-            <li><a href="#sobre-Nosotros" class="text-gray-400 hover:text-white">Sobre Nosotros</a></li>
+            <li><a href="#sobre-mi" class="text-gray-400 hover:text-white">Sobre Mí</a></li>
             <li><a href="#testimonios" class="text-gray-400 hover:text-white">Testimonios</a></li>
             <li><a href="#productos" class="text-gray-400 hover:text-white">Productos</a></li>
             <li><a href="#ofertas" class="text-gray-400 hover:text-white">Ofertas</a></li>
@@ -208,7 +269,7 @@
         <div class="footer-contact">
           <h4>Contacto</h4>
           <div class="footer-contact-info">
-            <p><i class="fas fa-phone mr-2"></i> +5354642589</p>
+            <p><i class="fas fa-phone mr-2"></i> +5353933247</p>
           </div>
         </div>
         <div class="footer-social">
@@ -220,14 +281,14 @@
             <a href="https://www.instagram.com/tuDespensa.25" target="_blank" class="text-gray-400 hover:text-white text-xl">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://wa.me/+5354642589" target="_blank" class="text-gray-400 hover:text-white text-xl">
+            <a href="https://wa.me/5353933247" target="_blank" class="text-gray-400 hover:text-white text-xl">
               <i class="fab fa-whatsapp"></i>
             </a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Tienda y Hogar. Todos los derechos reservados.</p>
+        <p>&copy; 2024 TuDespensa.25. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
