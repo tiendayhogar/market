@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', setMobileViewport);
 window.addEventListener('resize', setMobileViewport);
 // Tasa de cambio: 1 USD equivale a 340.0 CUP (ajusta según necesites)
 
-const tasaCambio = 340.0;
+const tasaCambio = 380.0;
 
 // Ubicaciones disponibles
 const ubicaciones = {
@@ -2075,7 +2075,7 @@ function renderizarListaProductos(listaProductos) {
         <div class="etiqueta-categoria ${categoriaSinBarra}">${prod.categoria}</div>
         <img src="images/${prod.imagen}" alt="${prod.nombre}" loading="lazy">
         <h3>${prod.nombre}</h3>
-        <a href="https://wa.me/5353933247?text=${encodeURIComponent("Me interesa una cotización para " + prod.nombre)}" 
+        <a href="https://wa.me/5354642589?text=${encodeURIComponent("Me interesa una cotización para " + prod.nombre)}" 
            target="_blank" class="btn-cotizacion">Cotización del Servicio</a>
       `;
     } else {
@@ -2676,7 +2676,7 @@ function enviarPedidoPorWhatsapp() {
 
   try {
     const mensajeCodificado = encodeURIComponent(mensaje);
-    const urlWhatsapp = `https://wa.me/5353933247?text=${mensajeCodificado}`;
+    const urlWhatsapp = `https://wa.me/5354642589?text=${mensajeCodificado}`;
     window.open(urlWhatsapp, "_blank");
     alert("¡Pedido enviado correctamente! Gracias por su compra.");
     cerrarModalPedido();
