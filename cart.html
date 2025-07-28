@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrito de Compras - TuDespensa.25</title>
+  <title>Carrito de Compras - Más cerca del barrio</title>
   <link rel="stylesheet" href="styles.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -13,13 +13,13 @@
   <header class="site-header">
     <div class="top-bar">
       <div class="social-icons">
-        <a class="btn-compartir" href="https://www.facebook.com/tuDespensa.25" target="_blank" aria-label="Facebook">
+        <a class="btn-compartir" href="" target="_blank" aria-label="Facebook">
           <i class="fab fa-facebook-f"></i>
         </a>
-        <a class="btn-compartir" href="https://www.instagram.com/tuDespensa.25" target="_blank" aria-label="Instagram">
+        <a class="btn-compartir" href="" target="_blank" aria-label="Instagram">
           <i class="fab fa-instagram"></i>
         </a>
-        <a class="btn-compartir" href="https://wa.me/5353933247" target="_blank" aria-label="WhatsApp">
+        <a class="btn-compartir" href="https://wa.me/5354642589" target="_blank" aria-label="WhatsApp">
           <i class="fab fa-whatsapp"></i>
         </a>
         <button class="share-btn" onclick="sharePage()" aria-label="Compartir Página">
@@ -34,7 +34,7 @@
       <nav class="main-nav">
         <ul>
           <li><a href="index.html#inicio">Inicio</a></li>
-          <li><a href="index.html#sobre-mi">Sobre Mí</a></li>
+          <li><a href="index.html#sobre-mi">Sobre Nosotros</a></li>
           <li><a href="index.html#info-servicios">Servicios</a></li>
           <li><a href="index.html#productos">Productos</a></li>
         </ul>
@@ -64,13 +64,13 @@
   
   <footer>
     <div class="redes-sociales">
-      <a class="btn-compartir" href="https://www.facebook.com/tuDespensa.25" target="_blank" aria-label="Facebook">
+      <a class="btn-compartir" href="" target="_blank" aria-label="Facebook">
         <i class="fab fa-facebook-f"></i>
       </a>
-      <a class="btn-compartir" href="https://www.instagram.com/tuDespensa.25" target="_blank" aria-label="Instagram">
+      <a class="btn-compartir" href="" target="_blank" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
-      <a class="btn-compartir" href="https://wa.me/5353933247" target="_blank" aria-label="WhatsApp">
+      <a class="btn-compartir" href="https://wa.me/5354642589" target="_blank" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
       </a>
       <button class="share-btn btn-compartir" onclick="sharePage()" aria-label="Compartir Página">
@@ -131,7 +131,7 @@
 // Objeto para gestionar el carrito (versión mejorada)
 const carritoManager = {
   carrito: [],
-  tasaCambio: 340.0, // Tasa USD a CUP
+  tasaCambio: 380.0, // Tasa USD a CUP
   
   init() {
     this.cargarCarrito();
@@ -291,7 +291,7 @@ const carritoManager = {
 
     try {
       console.log('Abriendo WhatsApp...');
-      const urlWhatsapp = `https://wa.me/5353933247?text=${encodeURIComponent(mensaje)}`;
+      const urlWhatsapp = `https://wa.me/5354642589?text=${encodeURIComponent(mensaje)}`;
       window.open(urlWhatsapp, '_blank');
       
       console.log('WhatsApp abierto, mostrando confirmación...');
