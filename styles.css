@@ -2053,4 +2053,210 @@ html, body {
   font-size: 0.9em;
 }
 /* Contenedor principal de combos */
-#comb
+#combos-temporales-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 15px;
+  -webkit-overflow-scrolling: touch; /* Para scroll suave en iOS */
+}
+
+/* Contenedor interno que lleva los combos */
+.combos-inner-container {
+  display: inline-flex;
+  gap: 15px;
+  padding: 0 15px;
+  white-space: nowrap;
+}
+
+/* Estilo de cada combo individual */
+.combo-Oferta {
+  display: inline-block;
+  width: 280px;
+  min-width: 280px;
+  vertical-align: top;
+  white-space: normal;
+}
+
+/* Ocultar la barra de scroll pero mantener funcionalidad */
+#combos-temporales-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+  .combo-Oferta {
+    width: 85vw;
+    min-width: 85vw;
+  }
+  
+  .combos-inner-container {
+    gap: 10px;
+    padding: 0 10px;
+  }
+}
+/* Estilos para la sección de productos recientes */
+#productos-recientes {
+  padding: 20px 0 30px 20px; /* Margen izquierdo de 20px */
+  margin-top: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+#productos-recientes .titulo-seccion {
+  color: #2a9d8f; /* Color verde azulado */
+  margin-left: 10px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.contenedor-deslizable {
+  overflow-x: auto;
+  padding-bottom: 15px; /* Espacio para la barra de scroll */
+  margin-left: 10px; /* Margen izquierdo adicional */
+}
+
+.productos-recientes-container {
+  display: inline-flex; /* Cambiado a inline-flex para scroll horizontal */
+  gap: 15px;
+  padding: 10px 5px;
+}
+
+/* Estilo de la barra de desplazamiento */
+.contenedor-deslizable::-webkit-scrollbar {
+  height: 8px;
+}
+
+.contenedor-deslizable::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.contenedor-deslizable::-webkit-scrollbar-thumb {
+  background: #2a9d8f;
+  border-radius: 10px;
+}
+
+.contenedor-deslizable::-webkit-scrollbar-thumb:hover {
+  background: #21867a;
+}
+
+/* Estilo específico para productos recientes */
+#productos-recientes .producto {
+  min-width: 200px; /* Ancho mínimo para cada producto */
+  flex: 0 0 auto; /* Evita que se estiren los items */
+  border: 1px solid #e9e9e9;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+#productos-recientes .producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Etiqueta "Nuevo" */
+#productos-recientes .producto::after {
+  content: "NUEVO";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #2a9d8f;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+/* Estilos para el menú */
+.menu-container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.menu-categories {
+  width: 250px;
+  background: #f8f9fa;
+  border-right: 1px solid #eee;
+  padding: 20px 0;
+}
+
+.menu-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.category:hover {
+  background: #e9ecef;
+}
+
+.category.active {
+  background: #e9ecef;
+  border-left: 3px solid #007bff;
+  font-weight: 600;
+}
+
+.category i {
+  margin-right: 10px;
+  color: #6c757d;
+  width: 20px;
+  text-align: center;
+}
+
+.category.active i {
+  color: #007bff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-container {
+    flex-direction: column;
+  }
+  
+  .menu-categories {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .category {
+    flex-direction: column;
+    padding: 10px;
+    min-width: 80px;
+    text-align: center;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+  }
+  
+  .category.active {
+    border-left: none;
+    border-bottom: 3px solid #007bff;
+  }
+  
+  .category i {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+  
+  .category span {
+    font-size: 12px;
+  }
+}
