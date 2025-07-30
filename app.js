@@ -503,7 +503,7 @@ const productos = [
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
   },
-  {
+/*  {
     id: 12,
     nombre: "Humaré",
     precio: 1.4,
@@ -512,7 +512,7 @@ const productos = [
     categoria: "Alimentos/Cárnicos",
     reciente  : 1, 
     municipios: [ 4, 5, 6, 7, 8, 9, 10, 11, ,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
-  },
+  }, */
   {
     id: 134,
     nombre: "Mortadela de pollo Seara",
@@ -545,7 +545,7 @@ const productos = [
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
   },
-  {
+/*  {
     id: 131,
     nombre: "Salchichas GuiBon ",
     precio: 10.90,
@@ -555,7 +555,7 @@ const productos = [
     municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
-  },
+  }, */
   {
     id: 132,
     nombre: "Higado de Pollo ",
@@ -682,7 +682,7 @@ const productos = [
   {
     id: 23,
     nombre: "Malta Guajira",
-    precio: 6.50,
+    precio: 6.00,
     imagen: "guajira.png",
     description: "Blister de 6 uds de 500 ml",
     categoria: "Alimentos/Líquidos",
@@ -807,7 +807,7 @@ const productos = [
   {
     id: 130,
     nombre: "Café La Llave ",
-    precio: 6.9,
+    precio: 8.00,
     imagen: "lallave.png",
     description: "Paquete de 283 gr",
     categoria: "Alimentos/Líquidos",
@@ -830,7 +830,7 @@ const productos = [
     ]
   },
 
-  {
+/*  {
     id: 127,
     nombre: "Maíz dulce en granos  ",
     precio: 1.70,
@@ -841,7 +841,7 @@ const productos = [
     municipios: [1,2,3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
-  },
+  }, */
   {
     id: 80,
     nombre: "Jugo de Naranja Agria Badia ",
@@ -929,7 +929,7 @@ const productos = [
   {
     id: 87,
     nombre: "Botella de Aceite",
-    precio: 3.20,
+    precio: 2.80,
     imagen: "aceite.png",
     description: "Botella  de 1 L ",
     categoria: "Aderezo y condimentos",
@@ -1116,7 +1116,7 @@ const productos = [
   {
     id: 38,
     nombre: "Frijol Negro ",
-    precio: 8,
+    precio: 10,
     imagen: "frijol5lb.png",
     description: "bolsa de 5 Lb",
     categoria: "Granos",
@@ -1127,7 +1127,7 @@ const productos = [
   {
     id: 39,
     nombre: "Frijol Negro ",
-    precio: 3.2,
+    precio: 3.75,
     imagen: "frijol1kg.png",
     description: "bolsa de 1 kg",
     categoria: "Granos",
@@ -1138,7 +1138,7 @@ const productos = [
   {
     id: 40,
     nombre: "Frijol Colorado ",
-    precio: 8,
+    precio: 10,
     imagen: "colorados5lb.png",
     description: "bolsa de 5 Lb",
     categoria: "Granos",
@@ -1160,7 +1160,7 @@ const productos = [
   {
     id: 42,
     nombre: "Arroz Brasileño",
-    precio: 2.2,
+    precio: 2.20,
     imagen: "arroz1kg.png",
     description: "bolsa de 1 kg",
     categoria: "Granos",
@@ -1206,7 +1206,7 @@ const productos = [
   {
     id: 45,
     nombre: "Cartón de huevos",
-    precio: 10.20,
+    precio: 11.00,
     imagen: "huevo.png",
     description: "30 uds frescos 100 % orgánicos",
     categoria: "Productos mixtos",
