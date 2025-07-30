@@ -545,7 +545,7 @@ const productos = [
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
   },
-  {
+/*  {
     id: 131,
     nombre: "Salchichas GuiBon ",
     precio: 10.90,
@@ -555,7 +555,7 @@ const productos = [
     municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
-  },
+  }, */
   {
     id: 132,
     nombre: "Higado de Pollo ",
@@ -807,7 +807,7 @@ const productos = [
   {
     id: 130,
     nombre: "Café La Llave ",
-    precio: 6.9,
+    precio: 8.0,
     imagen: "lallave.png",
     description: "Paquete de 283 gr",
     categoria: "Alimentos/Líquidos",
@@ -830,7 +830,7 @@ const productos = [
     ]
   },
 
-  {
+/*  {
     id: 127,
     nombre: "Maíz dulce en granos  ",
     precio: 1.70,
@@ -841,7 +841,7 @@ const productos = [
     municipios: [1,2,3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
-  },
+  }, */
   {
     id: 80,
     nombre: "Jugo de Naranja Agria Badia ",
@@ -929,7 +929,7 @@ const productos = [
   {
     id: 87,
     nombre: "Botella de Aceite",
-    precio: 3.20,
+    precio: 2.80,
     imagen: "aceite.png",
     description: "Botella  de 1 L ",
     categoria: "Aderezo y condimentos",
@@ -1116,7 +1116,7 @@ const productos = [
   {
     id: 38,
     nombre: "Frijol Negro ",
-    precio: 8,
+    precio: 10,
     imagen: "frijol5lb.png",
     description: "bolsa de 5 Lb",
     categoria: "Granos",
@@ -1127,7 +1127,7 @@ const productos = [
   {
     id: 39,
     nombre: "Frijol Negro ",
-    precio: 3.2,
+    precio: 1.50,
     imagen: "frijol1kg.png",
     description: "bolsa de 1 kg",
     categoria: "Granos",
@@ -1138,7 +1138,7 @@ const productos = [
   {
     id: 40,
     nombre: "Frijol Colorado ",
-    precio: 8,
+    precio: 10,
     imagen: "colorados5lb.png",
     description: "bolsa de 5 Lb",
     categoria: "Granos",
@@ -1160,7 +1160,7 @@ const productos = [
   {
     id: 42,
     nombre: "Arroz Brasileño",
-    precio: 2.2,
+    precio: 2.20,
     imagen: "arroz1kg.png",
     description: "bolsa de 1 kg",
     categoria: "Granos",
@@ -1206,7 +1206,7 @@ const productos = [
   {
     id: 45,
     nombre: "Cartón de huevos",
-    precio: 10.20,
+    precio: 11.0,
     imagen: "huevo.png",
     description: "30 uds frescos 100 % orgánicos",
     categoria: "Productos mixtos",
@@ -1416,4 +1416,1543 @@ const productos = [
     id: 55,
     nombre: "Detergente polvo Multiuso",
     precio: 2.6,
-    imagen: "detergente
+    imagen: "detergente.png",
+    description: "bolsa de 1 Kg ",
+    categoria: "Del Hogar",
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 56,
+    nombre: "Jabón De Olor",
+    precio: 1.2,
+    imagen: "jabon.png",
+    description: "por unidades",
+    categoria: "Del Hogar",
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ],
+    descuento : 30, 
+  },
+  {
+    id: 57,
+    nombre: "Papel Higienico",
+    precio: 2.2,
+    imagen: "papel.png",
+    description: "bolsa con 4 unidad sellada",
+    categoria: "Del Hogar",
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 58,
+    nombre: "Perlas de olor para ropa",
+    precio: 3.5,
+    imagen: "perlas.png",
+    description: "frasco de 200 gr",
+    categoria: "Del Hogar",
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 59,
+    nombre: "Suavizante para ropa",
+    precio: 6,
+    imagen: "suavizante.png",
+    description: "Pomo de 1 lt",
+    categoria: "Del Hogar",
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 60,
+    nombre: "Toallitas humedas multiuso premiun",
+    precio: 3.8,
+    imagen: "toallas.png",
+    description: "Paquete de 120 udst",
+    categoria: "Del Hogar",
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 61,
+    nombre: "Pastillas de inodoro",
+    precio: 2.40,
+    imagen: "pastillas.png",
+    description: "4 uds",
+    categoria: "Del Hogar",
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  // De Electrodomésticos
+  {
+    id: 62,
+    nombre: "Ventilador de pedestal",
+    precio: 60,
+    imagen: "ventilador.png",
+    description: "Ventilador tipo ciclón Milexus",
+    categoria: "De Electrodomésticos",
+    descuento : 5,
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 94,
+    nombre: "Cajas de tv Hd",
+    precio: 65,
+    imagen: "cajita.png",
+    description: "Caja descodificadora Hd",
+    categoria: "De Electrodomésticos",
+    descuento : 5,
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 95,
+    nombre: "Olla reina Milexus ",
+    precio: 100,
+    imagen: "reina.png",
+    description: "Olla reina de 6L Milexus",
+    categoria: "De Electrodomésticos",
+    descuento : 20,
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 96,
+    nombre: "Olla Arrocera ",
+    precio: 60 ,
+    imagen: "arrocera.png",
+    description: "Olla arrocera de 1,8 l Milexus",
+    categoria: "De Electrodomésticos",
+    descuento : 18,
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 97,
+    nombre: "Freidora de aire  ",
+    precio: 100 ,
+    imagen: "freidora.png",
+    description: "Olla freidora de aire de 4 l ",
+    categoria: "De Electrodomésticos",
+    descuento : 10,
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 114,
+    nombre: "Fogon de 3 quemadores  ",
+    precio: 75,
+    imagen: "fogon.png",
+    description: "Fogon milexus de 3 quemadores ",
+    categoria: "De Electrodomésticos",
+    descuento : 15,
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 98,
+    nombre: "Ventilador de pared ",
+    precio: 75,
+    imagen: "ventiladorpared.png",
+    description: "Ventilador de 18 pulgadas de pared ",
+    categoria: "De Electrodomésticos",
+    descuento : 15,
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 99,
+    nombre: "Fogon Infrarrojo   ",
+    precio: 100,
+    imagen: "fogoninfra.png",
+    description: "Fogon Infrarrojo 2200 W    ",
+    categoria: "De Electrodomésticos",
+    descuento : 20,
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 103,
+    nombre: "Microwave Premier 20 Litro    ",
+    precio: 160,
+    imagen: "microwave.png",
+    description: "Microwave Premier 20 Litro    ",
+    categoria: "De Electrodomésticos",
+    descuento : 12,
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 104,
+    nombre: "Lavadora automática 8 L   ",
+    precio: 400,
+    imagen: "automatica.png",
+    description: "Lavadora automatica 8 L    ",
+    categoria: "De Electrodomésticos",
+    descuento : 12,
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 105,
+    nombre: "Lavadora semiautomática 7 L   ",
+    precio: 300,
+    imagen: "semiautomatica7.png",
+    description: "Lavadora semiautomatica 7 L    ",
+    categoria: "De Electrodomésticos",
+    descuento : 13,
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 106,
+    nombre: "Lavadora semiautomática 9 L   ",
+    precio: 320,
+    imagen: "semiautomatica7.png",
+    description: "Lavadora semiautomatica 7 L    ",
+    categoria: "De Electrodomésticos",
+    descuento : 12,
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  
+  {
+    id: 63,
+    nombre: "Split milexus",
+    precio: 380,
+    imagen: "split.png",
+    description: "Milexus 1200 btu",
+    categoria: "De Electrodomésticos",
+    descuento : 7,
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 64,
+    nombre: "Frezeer",
+    precio: 350,
+    imagen: "nevera.png",
+    description: "Milexus 6 pies",
+    categoria: "De Electrodomésticos",
+    descuento : 5,     
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 65,
+    nombre: "Tv de 32",
+    precio: 260,
+    imagen: "32.png",
+    description: "Tv inteligente 32 pulgadas",
+    categoria: "De Electrodomésticos",
+    descuento : 7,
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  /*{
+    id: 66,
+    nombre: "Tv de 55",
+    precio: 450,
+    imagen: "55.png",
+    description: "Tv inteligente Milexus 55 pulgadas",
+    categoria: "De Electrodomésticos",
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  },*/
+  {
+    id: 67,
+    nombre: "Batidora Milexus",
+    precio: 45,
+    imagen: "batidora.png",
+    descuento : 5,
+    description: "Batidora 2 en 1 (+ moledor de sazones)",
+    categoria: "De Electrodomésticos",
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 68,
+    nombre: "Cefetera Milexus",
+    precio: 45,
+    imagen: "cafetera.png",
+    description: "Cafetera Electrica de 6 tazas",
+    categoria: "De Electrodomésticos",
+    municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  // Del Confi
+  {
+    id: 69,
+    nombre: "Galletas María Baduco",
+    precio: 1.25,
+    imagen: "mariasbaduco.png",
+    description: "Tubo de 170 gr",
+    categoria: "Alimentos/Del Confi",
+    municipios: [, 4, 5, 6, 7, 8, 9, 10, 11,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
+    reciente: 1, // Marcar como reciente
+    
+  },
+   {
+    id: 118,
+    nombre: "Galletas Samyeli",
+    precio: 0.90,
+    imagen: "samyeli.png",
+    description: "Tubo de 150 gr",
+    categoria: "Alimentos/Del Confi",
+    municipios: [1,2,3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
+    reciente: 1, // Marcar como reciente
+    
+  },
+   {
+    id: 119,
+    nombre: "Donut Brawo de Caramelo",
+    precio: 0.50,
+    imagen: "donutbravo.png",
+    description: "paquetico de 40 gr ",
+    categoria: "Alimentos/Del Confi",
+    municipios: [1,2,3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
+    reciente: 1, // Marcar como reciente
+    
+  },
+   {
+    id: 120,
+    nombre: "Galletas Maxi 2000",
+    precio: 2.60,
+    imagen: "maxis2000.png",
+    description: "paquete  de 500 gr ",
+    categoria: "Alimentos/Del Confi",
+    municipios: [1,2,3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
+    reciente: 1, // Marcar como reciente
+    
+  },
+   {
+    id: 121,
+    nombre: "Bombom Truffle de Chocolate",
+    precio: 8.60,
+    imagen: "trufle.png",
+    description: "Bolsa de 35 uds  ",
+    categoria: "Alimentos/Del Confi",
+    municipios: [1,2,3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
+    reciente: 1, // Marcar como reciente
+    
+  },
+  {
+    id: 122,
+    nombre: "Galletas black out",
+    precio: 2.20,
+    imagen: "blackout.png",
+    description: "Bolsa de 4 paquetes  ",
+    categoria: "Alimentos/Del Confi",
+    municipios: [1,2,3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
+    reciente: 1, // Marcar como reciente
+    
+  },
+  /*{
+    id: 123,
+    nombre: "Papas Fritas Sabrosísimo",
+    precio: 2.20,
+    imagen: "papasfritas.png",
+    description: "tubo de 140 gr  ",
+    categoria: "Alimentos/Del Confi",
+    municipios: [1,2,3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
+    reciente: 1, // Marcar como reciente
+    
+  },*/
+  {
+    id: 124,
+    nombre: "Schoco cake",
+    precio: 0.55,
+    imagen: "schoco.png",
+    description: "donut de 40 gr  ",
+    categoria: "Alimentos/Del Confi",
+    municipios: [1,2,3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
+    reciente: 1, // Marcar como reciente
+    
+  },
+ /* {
+    id: 128,
+    nombre: "Galletas Kremali",
+    precio: 1.11,
+    imagen: "kremali.png",
+    description: "paquete de 70 gr ",
+    categoria: "Alimentos/Del Confi",
+    municipios: [1,2,3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
+    reciente: 1, // Marcar como reciente
+    
+  },*/
+   {
+    id: 125,
+    nombre: "Waffer de Vainilla, fresa y chocolate",
+    precio: 1.50,
+    imagen: "waferfresa.png",
+    description: "paquete de 140 gr ",
+    categoria: "Alimentos/Del Confi",
+    municipios: [1,2,3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
+    reciente: 1, // Marcar como reciente
+    
+  },
+   {
+    id: 126,
+    nombre: "Caja de sorbeticos  de Vainilla",
+    precio: 7.50,
+    imagen: "sorbetico.png",
+    description: "Caja de 12 paquetes de 40  gr ",
+    categoria: "Alimentos/Del Confi",
+    municipios: [1,2,3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
+    reciente: 1, // Marcar como reciente
+    
+  },
+   {
+    id: 110,
+    nombre: "Galletas Snack Crackers",
+    precio: 2.50,
+    imagen: "snackcrackers.png",
+    description: "Caja de 3 paquetes 189 gr",
+    categoria: "Alimentos/Del Confi",
+    municipios: [, 4, 5, 6, 7, 8, 9, 10, 11,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
+    reciente: 1, // Marcar como reciente
+    
+  },
+  {
+    id: 111,
+    nombre: "Donas de Fresa 🍓 ",
+    precio: 7.50,
+    imagen: "donutfresa.png",
+    description: "Caja de 24 unidades ",
+    categoria: "Alimentos/Del Confi",
+    municipios: [, 4, 5, 6, 7, 8, 9, 10, 11,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
+    reciente: 1, // Marcar como reciente
+    
+  },
+  {
+    id: 70,
+    nombre: "Bolita de chocolate",
+    precio: 3.20,
+    imagen: "bolitas.png",
+    description: "bolsa de 500 gr",
+    categoria: "Alimentos/Del Confi",
+    municipios: [, 4, 5, 6, 7, 8, 9, 10, 11,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 71,
+    nombre: "Best Chocolate",
+    precio: 3.20,
+    imagen: "conito.png",
+    description: "Pomo de conitos 595 gr",
+    categoria: "Alimentos/Del Confi",
+    municipios: [ 4, 5, 6, 7, 8, 9, 10, 11,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 72,
+    nombre: "Galletas Saltine Nezka",
+    precio: 3.50,
+    imagen: "saltine.png",
+    description: "Cajita de 454 gr",
+    categoria: "Alimentos/Del Confi",
+    municipios: [ 4, 5, 6, 7, 8, 9, 10, 11,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
+  {
+    id: 73,
+    nombre: "Galletas Soda",
+    precio: 3.20,
+    imagen: "soda.png",
+    description: "Paquete de 8 uds",
+    categoria: "Alimentos/Del Confi",
+    municipios: [ 4, 5, 6, 7, 8, 9, 10, 11,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ],
+  },
+ 
+]; 
+// Combos temporales (justo después de la lista de productos existente)
+const combosOferta = [
+  /*{
+    id: 20012,
+    nombre: "Combo Para Mamá 1",
+    precio: 41.99,
+    imagen: "combo1m.png",
+    description: "Incluye 2 Bottelas de 1 L de aceite, 800 gr de Pasta de  Tomate, 5 spaguetis, 1 Garbanzo Goya, Bolsa de 5 lb de Frijol Negro,1 Mayonesa Celorio, Bolsa de 1 kg de Leche en Polvo, 2 Latas de Leche Condensada ",
+    categoria: "Combos Temporales",
+    reciente: 0,
+    
+    tiempoLimite: 72, // Horas de duración
+    municipios: [ 4, 5, 6, 7, 8, 9, 10, 11,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+     ]
+  },*/
+  {
+    id: 30026,
+    nombre: "Combo De Granos",
+    precio: 16.50,
+    imagen: "combo2.png",
+    description: "Incluye 11 Lb de Arroz Brasileño, 5 Lb de Frijol Negro .",
+    categoria: "Combos en oferta",
+    
+    descuento: 0,
+   
+    municipios: [1,2,3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+     ]
+  },
+ {
+    id: 20038,
+    nombre: "Combo Fresa 🍓 ",
+    precio: 18.50,
+    imagen: "comboyogurt.png",
+    description: "Incluye Caja de 24 donas de fresa, 1 cubeta de 4 L de yogurt probiótico de Fresa  ",
+    categoria: "Combos en oferta",
+    
+    descuento: 0,
+    
+    municipios: [ 4, 5, 6, 7, 8, 9, 10, 11,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 ]
+  },
+  /*{
+    id: 20044,
+    nombre: "Combo Apis+ Pollo",
+    precio: 8.50,
+    imagen: "polloapis.png",
+    description: "Incluye 1 bolsa sellada al vacío de 3lb de pollo ahumado + 1 Tomate frito Español Apis   ",
+    categoria: "Combos Temporales",
+    
+    descuento: 0,
+    tiempoLimite: 72,
+    municipios: [ 4, 5, 6, 7, 8, 9, 10, 11, 
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },*/
+   {
+    id: 20055,
+    nombre: "Combo Granos Plus",
+    precio: 70,
+    imagen: "combo4m.png",
+    description: "Incluye 50 lb de Arroz Brasileño, 10 lb de Frijol Negro, 8 lb de Azúcar Blanca.   ",
+    categoria: "Combos en oferta",
+    
+    descuento: 0,
+    
+    municipios: [ 4, 5, 6, 7, 8, 9, 10, 11,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+     ]
+  },
+  /*{
+    id: 20062,
+    nombre: "Combo Para Mamá 5",
+    precio: 20,
+    imagen: "combo5m.png",
+    description: "Incluye 6 compotas, 6 latas de jugo multifrutas, 1 mantequilla de maní, 2 Tubos de galleta María, 3 Papitas Classic Mixtas.   ",
+    categoria: "Combos en oferta",
+    
+    descuento: 0,
+    tiempoLimite: 72,
+    municipios: [ 4, 5, 6, 7, 8, 9, 10, 11,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+     ]
+  },
+  {
+    id: 20072,
+    nombre: "Combo Para Mamá 6",
+    precio: 17.99,
+    imagen: "combo6m.png",
+    description: "Incluye 1 Pomo de Ajo triturado badia, 1 zumo de limón badia , 1 zumo de naranja badia, 2 botellas de aceite de 1 L, caja de 20 sazones Tropical.   ",
+    categoria: "Combos Temporales",
+    
+    descuento: 0,
+    tiempoLimite: 72,
+    municipios: [ 4, 5, 6, 7, 8, 9, 10, 11,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+     ]
+  },
+  {
+    id: 20082,
+    nombre: "Combo Para Mamá 7",
+    precio: 20.99,
+    imagen: "combo7m.png",
+    description: "Incluye 5 paquetes de spahgetti, 1 lata de 800 gr de pasta de tomate, 1 pomo de queso parmesano, 1 mayonesa celorio de 500 gr  ",
+    categoria: "Combos Temporales",
+    
+    descuento: 0,
+    tiempoLimite: 72,
+    municipios: [ 4, 5, 6, 7, 8, 9, 10, 11,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+     ]
+  },
+  {
+    id: 20092,
+    nombre: "Combo Para Mamá 8",
+    precio: 9.20,
+    imagen: "combo8m.png",
+    description: "Incluye 1 paquete de chicharos verde de 16 oz, 1 paquete de alubias de 16 oz, 1 paquete de frijol negro de 1 kg, 1 paquete de garbanzos de 16 oz, 1 bolsa de 1kg de frijol colorado  ",
+    categoria: "Combos Temporales",
+    
+    descuento: 0,
+    tiempoLimite: 72,
+    municipios: [ 4, 5, 6, 7, 8, 9, 10, 11,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+     ]
+  },
+  {
+    id: 20102,
+    nombre: "Combo Para Mamá 9",
+    precio: 13.99,
+    imagen: "combo9m.png",
+    description: "Incluye 1 paquete galletas marias (bolsa de 12 paqueticos, 6 Jugos de pera de 200 ml, 6 compotas, 3 papitas clasicc) ",
+    categoria: "Combos Temporales",
+    
+    descuento: 0,
+    tiempoLimite: 72,
+    municipios: [ 4, 5, 6, 7, 8, 9, 10, 11,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+     ]
+  },*/
+
+
+];
+// Mover esta función fuera de renderizarProductos para que sea accesible globalmente
+function filtrarProductosPorNombre(textoBusqueda) {
+  const textoMinuscula = textoBusqueda.toLowerCase();
+  return productos.filter(producto =>
+    producto.nombre.toLowerCase().includes(textoMinuscula)
+  );
+}
+
+// Función para manejar la búsqueda y mostrar resultados
+function buscarYMostrarProductos() {
+  const textoBusqueda = document.getElementById('busqueda-productos').value;
+  const productosFiltrados = filtrarProductosPorNombre(textoBusqueda);
+  
+  // Renderizar los productos filtrados
+  if (productosFiltrados.length === 0) {
+    productosContainer.innerHTML = '<p class="no-results">No se encontraron productos que coincidan con tu búsqueda.</p>';
+  } else {
+    renderizarListaProductos(productosFiltrados);
+  }
+}
+
+// Función modificada para renderizar una lista dada de productos
+function renderizarListaProductos(listaProductos) {
+  const fragment = document.createDocumentFragment();
+  
+  listaProductos.forEach(prod => {
+    const div = document.createElement("div");
+    div.className = "producto";
+    div.id = `producto-${prod.id}`;
+    div.dataset.id = prod.id;
+    div.dataset.categoria = prod.categoria;
+    const categoriaSinBarra = prod.categoria.replace(/[^a-zA-Z0-9]/g, '-');
+
+    if (prod.categoria === "Servicios") {
+      div.innerHTML = `
+        <div class="etiqueta-categoria ${categoriaSinBarra}">${prod.categoria}</div>
+        <img src="images/${prod.imagen}" alt="${prod.nombre}" loading="lazy">
+        <h3>${prod.nombre}</h3>
+        <a href="https://wa.me/5353933247?text=${encodeURIComponent("Me interesa una cotización para " + prod.nombre)}" 
+           target="_blank" class="btn-cotizacion">Cotización del Servicio</a>
+      `;
+    } else {
+      if (prod.descuento && prod.descuento > 0) {
+        const descuento = prod.descuento;
+        const precioOriginal = prod.precio;
+        const precioNuevo = precioOriginal * (1 - descuento / 100);
+        div.innerHTML = `
+          <div class="img-container">
+              <img src="images/${prod.imagen}" alt="${prod.nombre}" loading="lazy">
+              <div class="discount-label">Descuento ${descuento}%</div>
+          </div>
+          <div class="etiqueta-categoria ${categoriaSinBarra}">${prod.categoria}</div>
+          <h3>${prod.nombre}</h3>
+          <p class="precio-original">USD ${precioOriginal.toFixed(2)}</p>
+          <p class="precio-nuevo">USD ${precioNuevo.toFixed(2)}</p>
+          <button data-id="${prod.id}" class="btn-agregar">Agregar al carrito</button>
+        `;
+      } else {
+        div.innerHTML = `
+          <div class="etiqueta-categoria ${categoriaSinBarra}">${prod.categoria}</div>
+          <img src="images/${prod.imagen}" alt="${prod.nombre}" loading="lazy">
+          <h3>${prod.nombre}</h3>
+          <p class="precio-nuevo">USD ${prod.precio.toFixed(2)}</p>
+          <button data-id="${prod.id}" class="btn-agregar">Agregar al carrito</button>
+        `;
+      }
+    }
+    fragment.appendChild(div);
+  });
+  
+  productosContainer.innerHTML = "";
+  productosContainer.appendChild(fragment);
+}
+
+function renderizarListaProductos(listaProductos, contenedor = productosContainer) {
+  const fragment = document.createDocumentFragment();
+  
+  listaProductos.forEach(prod => {
+    const div = document.createElement("div");
+    div.className = "producto";
+    div.id = `producto-${prod.id}`;
+    div.dataset.id = prod.id;
+    div.dataset.categoria = prod.categoria;
+    const categoriaSinBarra = prod.categoria.replace(/[^a-zA-Z0-9]/g, '-');
+
+    if (prod.categoria === "Servicios") {
+      div.innerHTML = `
+        <div class="etiqueta-categoria ${categoriaSinBarra}">${prod.categoria}</div>
+        <img src="images/${prod.imagen}" alt="${prod.nombre}" loading="lazy">
+        <h3>${prod.nombre}</h3>
+        <a href="https://wa.me/5353933247?text=${encodeURIComponent("Me interesa una cotización para " + prod.nombre)}" 
+           target="_blank" class="btn-cotizacion">Cotización del Servicio</a>
+      `;
+    } else {
+      if (prod.descuento && prod.descuento > 0) {
+        const descuento = prod.descuento;
+        const precioOriginal = prod.precio;
+        const precioNuevo = precioOriginal * (1 - descuento / 100);
+        div.innerHTML = `
+          <div class="img-container">
+              <img src="images/${prod.imagen}" alt="${prod.nombre}" loading="lazy">
+              <div class="discount-label">Descuento ${descuento}%</div>
+          </div>
+          <div class="etiqueta-categoria ${categoriaSinBarra}">${prod.categoria}</div>
+          <h3>${prod.nombre}</h3>
+          <p class="precio-original">USD ${precioOriginal.toFixed(2)}</p>
+          <p class="precio-nuevo">USD ${precioNuevo.toFixed(2)}</p>
+          <button data-id="${prod.id}" class="btn-agregar">Agregar al carrito</button>
+        `;
+      } else {
+        div.innerHTML = `
+          <div class="etiqueta-categoria ${categoriaSinBarra}">${prod.categoria}</div>
+          <img src="images/${prod.imagen}" alt="${prod.nombre}" loading="lazy">
+          <h3>${prod.nombre}</h3>
+          <p class="precio-nuevo">USD ${prod.precio.toFixed(2)}</p>
+          <button data-id="${prod.id}" class="btn-agregar">Agregar al carrito</button>
+        `;
+      }
+    }
+    fragment.appendChild(div);
+  });
+  
+  contenedor.innerHTML = "";
+  contenedor.appendChild(fragment);
+}
+
+function renderizarProductos(categoria = "todas") {
+  if (!productosContainer) return;
+  
+  const municipioSeleccionado = localStorage.getItem('municipioSeleccionado');
+  
+  let filtrados = categoria === "todas" 
+    ? productos 
+    : productos.filter(p => p.categoria === categoria);
+  
+  if (municipioSeleccionado) {
+    filtrados = filtrados.filter(p => 
+      p.municipios && p.municipios.includes(parseInt(municipioSeleccionado)))
+  }
+  
+  renderizarListaProductos(filtrados);
+}
+function buscarYMostrarProductos() {
+  const textoBusqueda = document.getElementById('busqueda-productos').value.trim();
+  const resultadosContainer = document.getElementById('resultados-busqueda');
+  
+  if (textoBusqueda === '') {
+    toggleResultadosContainer(false);
+    return;
+  }
+
+  const productosFiltrados = filtrarProductosPorNombre(textoBusqueda);
+  
+  if (productosFiltrados.length === 0) {
+    resultadosContainer.innerHTML = '<p class="no-results">No se encontraron productos que coincidan con tu búsqueda.</p>';
+    toggleResultadosContainer(true);
+    scrollToResults();
+    return;
+  }
+
+  renderizarListaProductos(productosFiltrados, resultadosContainer);
+  toggleResultadosContainer(true);
+  scrollToResults();
+}
+
+// En el DOMContentLoaded, agregar el event listener para la búsqueda
+document.addEventListener("DOMContentLoaded", () => {
+  // ... código existente ...
+  
+ 
+    // Configurar el evento de búsqueda
+  const searchInput = document.getElementById('busqueda-productos');
+  if (searchInput) {
+    let timeout;
+    searchInput.addEventListener('input', () => {
+      clearTimeout(timeout);
+      timeout = setTimeout(buscarYMostrarProductos, 300);
+    });
+    
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        clearTimeout(timeout);
+        buscarYMostrarProductos();
+      }
+    });
+  }
+  
+  // ... resto del código existente ...
+});
+
+function renderizarCombosOferta() {
+  const combosContainer = document.getElementById("combos-Oferta-container");
+  if (!combosContainer) return;
+  
+  // Obtener municipio seleccionado
+  const municipioSeleccionado = parseInt(localStorage.getItem('municipioSeleccionado'));
+  
+  // Filtrar combos por categoría Y municipio
+  const combosFiltrados = productos.filter(p => 
+    (p.categoria === "Combos en oferta" || p.categoria === "Combos Temporales") && 
+    p.municipios?.includes(municipioSeleccionado)
+  );
+
+  // Obtener sección de combos
+  const seccionCombos = document.getElementById("combos-temporales");
+  if (!seccionCombos) return;
+
+  // Mostrar u ocultar según si hay combos
+  seccionCombos.style.display = combosFiltrados.length > 0 ? "block" : "none";
+  if (combosFiltrados.length === 0) return;
+
+  // Limpiar el contenedor
+  combosContainer.innerHTML = '';
+
+  // Crear contenedor interno
+  const innerContainer = document.createElement('div');
+  innerContainer.className = 'combos-inner-container';
+  
+  // Renderizar cada combo
+  combosFiltrados.forEach(combo => {
+    const comboDiv = document.createElement("div");
+    comboDiv.className = "producto combo-temporal";
+    comboDiv.dataset.id = combo.id;
+
+    // Cálculo del precio con o sin descuento
+    const tieneDescuento = combo.descuento && combo.descuento > 0;
+    const precioConDescuento = tieneDescuento
+      ? (combo.precio * (1 - combo.descuento / 100)).toFixed(2)
+      : combo.precio.toFixed(2);
+
+    // Estructura HTML del combo (sin temporizador)
+    comboDiv.innerHTML = `
+      <div class="img-container">
+        <img src="images/${combo.imagen}" alt="${combo.nombre}" loading="lazy">
+        ${tieneDescuento ? `<div class="discount-label">-${combo.descuento}%</div>` : ""}
+      </div>
+      <div class="etiqueta-categoria Combos-Temporales">${combo.categoria}</div>
+      <h3>${combo.nombre}</h3>
+      ${tieneDescuento ? `<p class="precio-original">USD ${combo.precio.toFixed(2)}</p>` : ""}
+      <p class="precio-nuevo">USD ${precioConDescuento}</p>
+      <button data-id="${combo.id}" class="btn-agregar">Agregar al carrito</button>
+    `;
+
+    innerContainer.appendChild(comboDiv);
+  });
+
+  combosContainer.appendChild(innerContainer);
+}
+
+  
+
+
+// Variables globales y caching de elementos
+let carrito = [];
+const productosContainer = document.getElementById("productos-container");
+const contadorCarritoElem = document.getElementById("contador-carrito");
+
+// Función que retorna el total en USD (sin conversión)
+function calcularTotalUSD() {
+  return carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);
+}
+
+/**
+ * RENDERIZAR PRODUCTOS
+ * - Muestra el nombre, la categoría y la imagen.
+ * - Si tiene descuento, se muestra el precio original TACHADO y el precio nuevo.
+ * - Filtra por municipio seleccionado
+ */
+function renderizarProductos(categoria = "todas") {
+  if (!productosContainer) return;
+  
+  const municipioSeleccionado = localStorage.getItem('municipioSeleccionado');
+  const fragment = document.createDocumentFragment();
+  
+  let filtrados = categoria === "todas" 
+    ? productos 
+    : productos.filter(p => p.categoria === categoria);
+  
+  // Filtrar por municipio si hay uno seleccionado
+  if (municipioSeleccionado) {
+    filtrados = filtrados.filter(p => 
+      p.municipios && p.municipios.includes(parseInt(municipioSeleccionado)))
+  }
+  
+  filtrados.forEach(prod => {
+    const div = document.createElement("div");
+    div.className = "producto";
+    div.id = `producto-${prod.id}`;
+    div.dataset.id = prod.id;
+    div.dataset.categoria = prod.categoria;
+    const categoriaSinBarra = prod.categoria.replace(/[^a-zA-Z0-9]/g, '-');
+
+    if (prod.categoria === "Servicios") {
+      div.innerHTML = `
+        <div class="etiqueta-categoria ${categoriaSinBarra}">${prod.categoria}</div>
+        <img src="images/${prod.imagen}" alt="${prod.nombre}" loading="lazy">
+        <h3>${prod.nombre}</h3>
+        <a href="https://wa.me/5353933247?text=${encodeURIComponent("Me interesa una cotización para " + prod.nombre)}" 
+           target="_blank" class="btn-cotizacion">Cotización del Servicio</a>
+      `;
+    } else {
+      if (prod.descuento && prod.descuento > 0) {
+        const descuento = prod.descuento;
+        const precioOriginal = prod.precio;
+        const precioNuevo = precioOriginal * (1 - descuento / 100);
+        div.innerHTML = `
+          <div class="img-container">
+              <img src="images/${prod.imagen}" alt="${prod.nombre}" loading="lazy">
+              <div class="discount-label">Descuento ${descuento}%</div>
+          </div>
+          <div class="etiqueta-categoria ${categoriaSinBarra}">${prod.categoria}</div>
+          <h3>${prod.nombre}</h3>
+          <p class="precio-original">USD ${precioOriginal.toFixed(2)}</p>
+          <p class="precio-nuevo">USD ${precioNuevo.toFixed(2)}</p>
+          <button data-id="${prod.id}" class="btn-agregar">Agregar al carrito</button>
+        `;
+      } else {
+        div.innerHTML = `
+          <div class="etiqueta-categoria ${categoriaSinBarra}">${prod.categoria}</div>
+          <img src="images/${prod.imagen}" alt="${prod.nombre}" loading="lazy">
+          <h3>${prod.nombre}</h3>
+          <p class="precio-nuevo">USD ${prod.precio.toFixed(2)}</p>
+          <button data-id="${prod.id}" class="btn-agregar">Agregar al carrito</button>
+        `;
+      }
+    }
+    fragment.appendChild(div);
+  });
+  productosContainer.innerHTML = "";
+  productosContainer.appendChild(fragment);
+}
+
+// Renderiza la sección de ofertas con filtro por municipio
+function renderizarOfertas() {
+  const ofertasContainer = document.querySelector(".ofertas-container");
+  if (!ofertasContainer) return;
+  
+  const municipioSeleccionado = localStorage.getItem('municipioSeleccionado');
+  let ofertas = productos.filter(p => p.descuento && p.descuento > 0);
+  
+  // Filtrar por municipio si hay uno seleccionado
+  if (municipioSeleccionado) {
+    ofertas = ofertas.filter(p => 
+      p.municipios && p.municipios.includes(parseInt(municipioSeleccionado)))
+  }
+  
+  const fragment = document.createDocumentFragment();
+
+  ofertas.forEach(prod => {
+    const div = document.createElement("div");
+    div.className = "producto";
+    div.dataset.id = prod.id;
+    const descuento = prod.descuento;
+    const precioOriginal = prod.precio;
+    const precioNuevo = precioOriginal * (1 - descuento / 100);
+    const categoriaSinBarra = prod.categoria.replace(/[^a-zA-Z0-9]/g, '-');
+
+    div.innerHTML = `
+      <div class="img-container">
+          <img src="images/${prod.imagen}" alt="${prod.nombre}" loading="lazy">
+          <div class="discount-label">Descuento ${descuento}%</div>
+      </div>
+      <div class="etiqueta-categoria ${categoriaSinBarra}">${prod.categoria}</div>
+      <h3>${prod.nombre}</h3>
+      <p class="precio-original">USD ${precioOriginal.toFixed(2)}</p>
+      <p class="precio-nuevo">USD ${precioNuevo.toFixed(2)}</p>
+      <button data-id="${prod.id}" class="btn-agregar">Agregar al carrito</button>
+    `;
+    fragment.appendChild(div);
+  });
+  ofertasContainer.innerHTML = "";
+  ofertasContainer.appendChild(fragment);
+}
+
+// Renderiza productos recientes con filtro por municipio
+function renderizarProductosRecientes() {
+  const productosRecientesContainer = document.querySelector(
+    "#productos-recientes .productos-recientes-container"
+  );
+  if (!productosRecientesContainer) return;
+
+  const municipioSeleccionado = localStorage.getItem('municipioSeleccionado');
+  let productosRecientes = productos.filter((p) => p.reciente === 1);
+  
+  // Filtrar por municipio si hay uno seleccionado
+  if (municipioSeleccionado) {
+    productosRecientes = productosRecientes.filter(p => 
+      p.municipios && p.municipios.includes(parseInt(municipioSeleccionado)))
+  }
+  
+  const fragment = document.createDocumentFragment();
+
+  productosRecientes.forEach((prod) => {
+    const div = document.createElement("div");
+    div.className = "producto";
+    div.dataset.id = prod.id;
+    const categoriaSinBarra = prod.categoria.replace(/[^a-zA-Z0-9]/g, "-");
+
+    div.innerHTML = `
+      <div class="img-container">
+        <img src="images/${prod.imagen}" alt="${prod.nombre}" loading="lazy">
+      </div>
+      <div class="etiqueta-categoria ${categoriaSinBarra}">${prod.categoria}</div>
+      <h3>${prod.nombre}</h3>
+      <p class="precio">USD ${prod.precio.toFixed(2)}</p>
+      <button data-id="${prod.id}" class="btn-agregar">Agregar al carrito</button>
+    `;
+    fragment.appendChild(div);
+  });
+  productosRecientesContainer.innerHTML = "";
+  productosRecientesContainer.appendChild(fragment);
+}
+
+// Agrega producto al carrito
+function agregarAlCarrito(id) {
+  const producto = productos.find(p => p.id === id);
+  if (!producto) return;
+  let precioCarrito = producto.precio;
+  if (producto.descuento && producto.descuento > 0) {
+    precioCarrito = producto.precio * (1 - producto.descuento / 100);
+  }
+  const enCarrito = carrito.find(p => p.id === id);
+  if (enCarrito) {
+    enCarrito.cantidad++;
+  } else {
+    carrito.push({ ...producto, precio: precioCarrito, cantidad: 1 });
+  }
+  mostrarMensaje(`¡${producto.nombre} agregado al carrito!`);
+  actualizarContadorCarrito();
+  guardarCarritoEnLocalStorage();
+}
+
+// Muestra mensaje emergente
+function mostrarMensaje(msg) {
+  const mensajeElem = document.createElement("div");
+  mensajeElem.className = "mensaje-carrito";
+  mensajeElem.textContent = msg;
+  document.body.appendChild(mensajeElem);
+  setTimeout(() => mensajeElem.remove(), 2000);
+}
+
+// Actualiza el contador del carrito
+function actualizarContadorCarrito() {
+  const total = carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
+  if (contadorCarritoElem) contadorCarritoElem.textContent = total;
+}
+
+// Guarda y carga el carrito desde localStorage
+function guardarCarritoEnLocalStorage() {
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
+function cargarCarritoDesdeLocalStorage() {
+  const guardado = localStorage.getItem("carrito");
+  if (guardado) {
+    carrito = JSON.parse(guardado) || [];
+    actualizarContadorCarrito();
+  }
+}
+
+function renderizarCarrito() {
+  const itemsCarrito = document.getElementById("items-carrito");
+  const totalElem = document.getElementById("total-pedido");
+  
+  if (!itemsCarrito) return;
+
+  itemsCarrito.innerHTML = "";
+  
+  if (carrito.length === 0) {
+    itemsCarrito.innerHTML = `
+      <div class="carrito-vacio">
+        <i class="fas fa-shopping-cart"></i>
+        <p>Tu carrito está vacío</p>
+        <a href="index.html" class="btn-seguir-comprando">Seguir comprando</a>
+      </div>
+    `;
+    if (totalElem) totalElem.textContent = "USD 0.00";
+    return;
+  }
+
+  const fragment = document.createDocumentFragment();
+  
+  carrito.forEach(prod => {
+    const div = document.createElement("div");
+    div.className = "item-carrito";
+    div.innerHTML = `
+      <img src="images/${prod.imagen}" alt="${prod.nombre}" onerror="this.src='images/placeholder.png'">
+      <div class="item-info">
+        <h4>${prod.nombre}</h4>
+        <p>USD ${prod.precio.toFixed(2)} x ${prod.cantidad}</p>
+        <p class="subtotal">Subtotal: USD ${(prod.precio * prod.cantidad).toFixed(2)}</p>
+      </div>
+      <div class="contador-cantidad">
+        <button class="btn-cambiar" data-id="${prod.id}" data-delta="-1">-</button>
+        <span class="cantidad">${prod.cantidad}</span>
+        <button class="btn-cambiar" data-id="${prod.id}" data-delta="1">+</button>
+      </div>
+      <button class="eliminar-item" data-id="${prod.id}">
+        <i class="fas fa-trash"></i>
+      </button>
+    `;
+    fragment.appendChild(div);
+  });
+
+  itemsCarrito.appendChild(fragment);
+  
+  // Calcular total según método de pago
+  const metodoPago = document.getElementById("metodo-pago")?.value || "USD";
+  const totalUSD = carrito.reduce((acc, prod) => acc + (prod.precio * prod.cantidad), 0);
+  
+  if (totalElem) {
+    if (metodoPago.includes("CUP")) {
+      totalElem.textContent = `CUP ${(totalUSD * tasaCambio).toFixed(2)}`;
+    } else {
+      totalElem.textContent = `USD ${totalUSD.toFixed(2)}`;
+    }
+  }
+}
+
+// Cambia la cantidad de un producto en el carrito
+function cambiarCantidad(id, delta) {
+  const prod = carrito.find(p => p.id === id);
+  if (!prod) return;
+  prod.cantidad += delta;
+  if (prod.cantidad <= 0) {
+    carrito = carrito.filter(p => p.id !== id);
+  }
+  guardarCarritoEnLocalStorage();
+  renderizarCarrito();
+  actualizarContadorCarrito();
+}
+
+// Elimina un producto del carrito
+function eliminarDelCarrito(id) {
+  carrito = carrito.filter(p => p.id !== id);
+  guardarCarritoEnLocalStorage();
+  renderizarCarrito();
+  actualizarContadorCarrito();
+}
+
+// Redirige a index.html
+function redirigirAPaginaPrincipal() {
+  window.location.href = "index.html";
+}
+
+function validarFormulario() {
+  const nombreComprador = document.getElementById("nombre-comprador").value;
+  const emailComprador = document.getElementById("email-comprador").value;
+  const telefonoComprador = document.getElementById("telefono-comprador").value;
+  const direccionEntrega = document.getElementById("direccion-entrega").value;
+
+  if (!nombreComprador || !emailComprador || !telefonoComprador || !direccionEntrega) {
+    alert("Por favor, complete todos los campos obligatorios.");
+    return false;
+  }
+
+  // Validación del número de teléfono (WhatsApp)
+  if (!/^\d{8,10}$/.test(telefonoComprador)) {
+    alert("El número de teléfono no es válido. Debe tener 8 o 9 o 10 dígitos.");
+    return false;
+  }
+
+  // Validación del correo electrónico (opcional)
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(emailComprador)) {
+    alert("El correo electrónico no es válido.");
+    return false;
+  }
+
+  return true;
+}
+
+// Envía el pedido por WhatsApp y vacía el carrito con el formato solicitado
+function enviarPedidoPorWhatsapp() {
+  if (!validarFormulario()) {
+    return; // Detener si la validación falla
+  }
+
+  const nombreComprador = document.getElementById("nombre-comprador").value;
+  const emailComprador = document.getElementById("email-comprador").value;
+  const telefonoComprador = document.getElementById("telefono-comprador").value;
+  const direccionEntrega = document.getElementById("direccion-entrega").value;
+  const nota = document.getElementById("nota").value;
+  const nombreBeneficiario = document.getElementById("nombre-beneficiario").value;
+  const telefonoBeneficiario = document.getElementById("telefono-beneficiario").value;
+  const metodoPago = document.getElementById("metodo-pago").value;
+  const totalUSD = calcularTotalUSD();
+
+  let totalMensaje;
+  let moneda;
+  if (metodoPago.indexOf("CUP") !== -1) {
+    totalMensaje = totalUSD * tasaCambio;
+    moneda = "CUP";
+  } else {
+    totalMensaje = totalUSD;
+    moneda = "USD";
+  }
+  const totalTexto = totalMensaje.toFixed(2) + " " + moneda;
+
+  let mensaje = `Nuevo Pedido\n\n`;
+  mensaje += `Datos del Comprador:\n\n`;
+  mensaje += `• Nombre: ${nombreComprador}\n`;
+  mensaje += `• Email: ${emailComprador}\n`;
+  mensaje += `• Teléfono: ${telefonoComprador}\n\n`;
+
+  if (nombreBeneficiario && telefonoBeneficiario) {
+    mensaje += `Datos del Beneficiario:\n\n`;
+    mensaje += `• Nombre: ${nombreBeneficiario}\n`;
+    mensaje += `• Teléfono: ${telefonoBeneficiario}\n\n`;
+  }
+
+  mensaje += `Información de Envío:\n\n`;
+  mensaje += `• Dirección: ${direccionEntrega}\n`;
+  if (nota) {
+    mensaje += `• Nota: ${nota}\n`;
+  }
+  mensaje += `• Método de Pago: ${metodoPago}\n\n`;
+
+  // Incluir el vendedor si existe
+  const vendedor = localStorage.getItem("vendedor");
+  if (vendedor) {
+    mensaje += `Vendedor: ${vendedor}\n\n`;
+  }
+
+  mensaje += `Información de Pago:\n`;
+  mensaje += `Total a pagar: ${totalTexto}\n`;
+  mensaje += `Por favor en minutos recibirá la cuenta a transferir realice la transferencia y envíe el comprobante por este medio.\n\n`;
+  mensaje += `Productos:\n\n`;
+  carrito.forEach(prod => {
+    let productTotal = prod.cantidad * prod.precio;
+    if (moneda === "CUP") {
+      productTotal *= tasaCambio;
+    }
+    mensaje += `• ${prod.cantidad}x ${prod.nombre} - ${productTotal.toFixed(2)} ${moneda}\n`;
+  });
+  mensaje += `\nTotal a Pagar: ${totalTexto} de 24 a 48 horas pedido completado, Siempre trataremos q sea en el día`;
+
+  try {
+    const mensajeCodificado = encodeURIComponent(mensaje);
+    const urlWhatsapp = `https://wa.me/5353933247?text=${mensajeCodificado}`;
+    window.open(urlWhatsapp, "_blank");
+    alert("¡Pedido enviado correctamente! Gracias por su compra.");
+    cerrarModalPedido();
+    vaciarCarrito();
+    limpiarFormulario();
+  } catch (error) {
+    console.error("Error al enviar el pedido:", error);
+    alert("Hubo un error al procesar su pedido. Por favor, intente de nuevo.");
+  }
+}
+
+function limpiarFormulario() {
+  document.getElementById("nombre-comprador").value = "";
+  document.getElementById("email-comprador").value = "";
+  document.getElementById("telefono-comprador").value = "";
+  document.getElementById("direccion-entrega").value = "";
+  document.getElementById("nombre-beneficiario").value = "";
+  document.getElementById("telefono-beneficiario").value = "";
+  if (document.getElementById("nota")) {
+    document.getElementById("nota").value = "";
+  }
+}
+
+// Vacía el carrito y actualiza la interfaz y el localStorage
+function vaciarCarrito() {
+  carrito = [];
+  guardarCarritoEnLocalStorage();
+  actualizarContadorCarrito();
+  if (document.getElementById("items-carrito")) {
+    renderizarCarrito();
+  }
+}
+
+// Cierra el modal de pedido
+function cerrarModalPedido() {
+  const modal = document.getElementById("modal-pedido");
+  if (modal) modal.style.display = "none";
+}
+
+// Modal para mostrar descripción del producto
+function mostrarDescripcionProducto(producto) {
+  const modal = document.getElementById("modal-descripcion");
+  if (!modal) return;
+
+  const modalImagen = modal.querySelector("#modal-imagen");
+  const modalNombre = modal.querySelector(".modal-nombre");
+  const modalDescripcion = modal.querySelector(".modal-descripcion");
+  const botonAgregar = modal.querySelector("#btn-add-modal");
+
+  modalImagen.src = `images/${producto.imagen}`;
+  modalImagen.alt = producto.nombre;
+  modalNombre.textContent = producto.nombre;
+  modalDescripcion.textContent = producto.description;
+
+  botonAgregar.dataset.id = producto.id;
+
+  modal.style.display = "block";
+}
+document.addEventListener("DOMContentLoaded", () => {
+  const botonAgregar = document.getElementById("btn-add-modal");
+  if (botonAgregar) {
+    botonAgregar.addEventListener("click", () => {
+      const id = parseInt(botonAgregar.dataset.id, 10);
+      agregarAlCarrito(id);
+
+      // Cerrar modal después de añadir
+      const modal = document.getElementById("modal-descripcion");
+      if (modal) modal.style.display = "none";
+    });
+  }
+});
+
+// Event delegation
+document.addEventListener("click", (e) => {
+  if (e.target.matches(".btn-agregar")) {
+    const id = parseInt(e.target.dataset.id, 10);
+    agregarAlCarrito(id);
+    return;
+  }
+  const productoDiv = e.target.closest(".producto");
+  if (productoDiv) {
+    const prodId = parseInt(productoDiv.dataset.id, 10);
+    const producto = productos.find((p) => p.id === prodId);
+    if (producto) {
+      mostrarDescripcionProducto(producto);
+    }
+  }
+  if (e.target.matches(".btn-cambiar")) {
+    const id = parseInt(e.target.dataset.id, 10);
+    const delta = parseInt(e.target.dataset.delta, 10);
+    cambiarCantidad(id, delta);
+  }
+  if (e.target.matches(".eliminar-item")) {
+    const id = parseInt(e.target.dataset.id, 10);
+    eliminarDelCarrito(id);
+  }
+  if (e.target.matches("#seguir-comprando")) {
+    redirigirAPaginaPrincipal();
+  }
+  if (e.target.matches(".cerrar-modal")) {
+    cerrarModalPedido();
+  }
+});
+
+const modalDescripcionClose = document.querySelector("#modal-descripcion .close");
+if (modalDescripcionClose) {
+  modalDescripcionClose.addEventListener("click", () => {
+    const modal = document.getElementById("modal-descripcion");
+    if (modal) modal.style.display = "none";
+  });
+}
+
+window.addEventListener("click", (e) => {
+  const modal = document.getElementById("modal-descripcion");
+  if (modal && e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+function actualizarTotalSegunMetodo() {
+  renderizarCarrito();
+}
+
+window.addEventListener("click", (e) => {
+  const modalPedido = document.getElementById("modal-pedido");
+  if (modalPedido && e.target === modalPedido) {
+    cerrarModalPedido();
+  }
+});
+
+function sharePage() {
+  if (navigator.share) {
+    navigator.share({
+      title: document.title,
+      url: window.location.href
+    })
+    .then(() => console.log("Página compartida exitosamente"))
+    .catch((error) => console.error("Error al compartir:", error));
+  } else {
+    alert("La función de compartir no es soportada en este navegador.");
+  }
+}
+
+// Inicialización al cargar la página
+document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
+  const botonAgregar = document.getElementById("btn-add-modal");
+  if (botonAgregar) {
+    botonAgregar.addEventListener("click", () => {
+      const id = parseInt(botonAgregar.dataset.id, 10);
+      agregarAlCarrito(id);
+
+      // Cierra el modal
+      const modal = document.getElementById("modal-descripcion");
+      if (modal) modal.style.display = "none";
+    });
+  }
+});
+
+  // Mostrar los modales de ubicación en cada carga de página
+  mostrarModalProvincias();
+  // Capturar el vendedor desde la URL y guardarlo
+  capturarVendedor();
+
+  cargarCarritoDesdeLocalStorage();
+  if (productosContainer) {
+    renderizarProductos();
+    const filtros = document.querySelectorAll(".filtro-btn");
+    filtros.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filtros.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderizarProductos(btn.dataset.categoria);
+      });
+    });
+    renderizarOfertas();
+  }
+  if (document.getElementById("items-carrito")) {
+    renderizarCarrito();
+    const btnWhatsapp = document.getElementById("pedir-whatsapp");
+    if (btnWhatsapp) {
+      btnWhatsapp.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.getElementById("modal-pedido").style.display = "block";
+      });
+    }
+    const formularioPedido = document.getElementById("formulario-pedido");
+    if (formularioPedido) {
+      formularioPedido.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (validarFormulario()) {
+          enviarPedidoPorWhatsapp();
+        }
+      });
+    }
+    const metodoSelect = document.getElementById("metodo-pago");
+    if (metodoSelect) {
+      metodoSelect.addEventListener("change", actualizarTotalSegunMetodo);
+    }
+  }
+  const telefonoInput = document.getElementById("telefono");
+  if (telefonoInput) {
+    telefonoInput.addEventListener("input", () => {
+      if (!/^\d*$/.test(telefonoInput.value)) {
+        telefonoInput.setCustomValidity("Solo se permiten números.");
+      } else {
+        telefonoInput.setCustomValidity("");
+      }
+    });
+  }
+});
+
+
+// Inicializar las secciones
+let currentSlide = 0;
+const slides = document.querySelectorAll(".banner-slide");
+const dots = document.querySelectorAll(".dot");
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    dots[i].classList.remove("active");
+    if (i === index) {
+      slide.classList.add("active");
+      dots[i].classList.add("active");
+    }
+  });
+}
+
+function changeSlide(step) {
+  currentSlide = (currentSlide + step + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+function goToSlide(index) {
+  currentSlide = index;
+  showSlide(currentSlide);
+}
+
+setInterval(() => {
+  changeSlide(1);
+}, 10000);
+function toggleMenu() {
+  const nav = document.getElementById("main-nav");
+  nav.classList.toggle("active");
+}
+
+// Inicializar
+showSlide(currentSlide);
+
+renderizarCombosOferta(); 
+renderizarOfertas();
+renderizarProductosRecientes();
+document.addEventListener('DOMContentLoaded', () => {
+  // Verifica si ya hay un municipio guardado en el localStorage.
+  const municipioGuardado = localStorage.getItem('municipioSeleccionado');
+  
+  // Verifica si la página actual es la del carrito (por ejemplo, "cart.html")
+  const isCartPage = window.location.pathname.includes('cart.html');
+  
+  
+  // Si no se encontró un municipio seleccionado y NO estamos en la página del carrito, se muestra el modal.
+  if (!municipioGuardado && !isCartPage) {
+    mostrarModalProvincias();
+  }
+});
+document.querySelector(".close-button").addEventListener("click", () => {
+  document.querySelector(".product-details-container").classList.remove("show");
+});
+const url = new URL(window.location.href);
+const hash = url.hash;
+
+if (hash.startsWith("#producto-")) {
+  const id = parseInt(hash.replace("#producto-", ""));
+  const producto = productos.find((p) => p.id === id);
+  if (producto) {
+    setTimeout(() => mostrarDescripcionProducto(producto), 500); // espera que cargue
+  }
+}
