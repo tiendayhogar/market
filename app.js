@@ -345,7 +345,7 @@ function obtenerVendedorDesdeURL() {
 const productos = [
   // Ejemplo de producto con atributo municipios
   
-  {
+/*  {
     id: 1,
     nombre: " Carne de Res 2da Cat troceada ",
     precio: 14.40,
@@ -354,11 +354,11 @@ const productos = [
     categoria: "Alimentos/Cárnicos",
     reciente: 0,
     municipios: [ 4, 5, 6, 7, 8, 9, 10, 11,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 ]
-  },
-  /*{
+  }, */
+  {
     id: 2,
     nombre: "Caja de Pollo",
-    precio: 52,
+    precio: 35,56
     imagen: "pollocaja.png",
     description: "caja de 40 lb de muslo y contramuslo 4 paquetes de 10 lb",
     categoria: "Alimentos/Cárnicos",
@@ -371,7 +371,7 @@ const productos = [
   {
     id: 75,
     nombre: "Caja de Pollo",
-    precio: 49,
+    precio: 46,67
     imagen: "caja33lbpollo.png",
     description: "caja de 33 lb de muslo y contramuslo 3 paquetes de 11 lb",
     categoria: "Alimentos/Cárnicos",
@@ -402,7 +402,7 @@ const productos = [
     municipios: [1, 2, 3, 12, 13,
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
-  },*/
+  },
 {
   id: 4,
   nombre: "Lomo de cerdo deshuesado",
