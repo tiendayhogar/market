@@ -534,7 +534,7 @@ const productos = [
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
   },
-/*  {
+  {
     id: 14,
     nombre: "Salchichas",
     precio: 1.90,
@@ -544,8 +544,8 @@ const productos = [
     municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
-  }, */
-  {
+  }, 
+/*  {
     id: 131,
     nombre: "Salchichas GuiBon ",
     precio: 10.90,
@@ -555,7 +555,7 @@ const productos = [
     municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
-  },
+  }, */
   {
     id: 132,
     nombre: "Higado de Pollo ",
