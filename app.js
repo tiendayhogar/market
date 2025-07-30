@@ -345,7 +345,7 @@ function obtenerVendedorDesdeURL() {
 const productos = [
   // Ejemplo de producto con atributo municipios
   
-  {
+/*  {
     id: 1,
     nombre: " Carne de Res 2da Cat troceada ",
     precio: 14.40,
@@ -354,8 +354,8 @@ const productos = [
     categoria: "Alimentos/Cárnicos",
     reciente: 0,
     municipios: [ 4, 5, 6, 7, 8, 9, 10, 11,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 ]
-  },
-  /*{
+  }, */
+  {
     id: 2,
     nombre: "Caja de Pollo",
     precio: 52,
@@ -371,7 +371,7 @@ const productos = [
   {
     id: 75,
     nombre: "Caja de Pollo",
-    precio: 49,
+    precio: 42,0
     imagen: "caja33lbpollo.png",
     description: "caja de 33 lb de muslo y contramuslo 3 paquetes de 11 lb",
     categoria: "Alimentos/Cárnicos",
@@ -384,7 +384,7 @@ const productos = [
   {
     id: 3,
     nombre: "Paquete de pollo 10 lb ",
-    precio: 13,
+    precio: 13,0
     imagen: "pollopqte.png",
     description: "paquete de 10 lb de muslo y contra muslo",
     categoria: "Alimentos/Cárnicos",
@@ -395,14 +395,14 @@ const productos = [
   {
     id: 77,
     nombre: "Paquete de pollo 11 lb ",
-    precio: 14,
+    precio: 14,0
     imagen: "pollopqte.png",
     description: "paquete de 11 lb de muslo y contra muslo",
     categoria: "Alimentos/Cárnicos",
     municipios: [1, 2, 3, 12, 13,
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
-  },*/
+  },
 {
   id: 4,
   nombre: "Lomo de cerdo deshuesado",
@@ -503,7 +503,7 @@ const productos = [
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
   },
-  {
+/*  {
     id: 12,
     nombre: "Humaré",
     precio: 1.4,
@@ -512,8 +512,8 @@ const productos = [
     categoria: "Alimentos/Cárnicos",
     reciente  : 1, 
     municipios: [ 4, 5, 6, 7, 8, 9, 10, 11, ,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
-  },
-  {
+  }, */
+/*  {
     id: 134,
     nombre: "Mortadela de pollo Seara",
     precio: 2.30,
@@ -522,7 +522,7 @@ const productos = [
     categoria: "Alimentos/Cárnicos",
     reciente  : 1, 
     municipios: [ 4, 5, 6, 7, 8, 9, 10, 11, ,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
-  },
+  }, */
   {
     id: 13,
     nombre: "Picadillo de pollo",
@@ -545,7 +545,7 @@ const productos = [
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
   },
-  {
+ /* {
     id: 131,
     nombre: "Salchichas GuiBon ",
     precio: 10.90,
@@ -554,8 +554,8 @@ const productos = [
     categoria: "Alimentos/Cárnicos",
     municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
-    ]
-  },
+    ] 
+  }, */
   {
     id: 132,
     nombre: "Higado de Pollo ",
@@ -830,7 +830,7 @@ const productos = [
     ]
   },
 
-  {
+/*  {
     id: 127,
     nombre: "Maíz dulce en granos  ",
     precio: 1.70,
@@ -841,7 +841,7 @@ const productos = [
     municipios: [1,2,3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
-  },
+  }, */
   {
     id: 80,
     nombre: "Jugo de Naranja Agria Badia ",
@@ -929,10 +929,10 @@ const productos = [
   {
     id: 87,
     nombre: "Botella de Aceite",
-    precio: 3.20,
+    precio: 2.80,
     imagen: "aceite.png",
     description: "Botella  de 1 L ",
-    categoria: "Aderezo y condimentos",
+    categoria: "Alimentos/Otros",
     reciente: 1,
     municipios: [ 4, 5, 6, 7, 8, 9, 10, 11,
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
@@ -1113,7 +1113,7 @@ const productos = [
     municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
     },
-  {
+/*  {
     id: 38,
     nombre: "Frijol Negro ",
     precio: 8,
@@ -1123,14 +1123,14 @@ const productos = [
     municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
-  },
+  }, */
   {
     id: 39,
     nombre: "Frijol Negro ",
-    precio: 3.2,
+    precio: 1.50,
     imagen: "frijol1kg.png",
     description: "bolsa de 1 kg",
-    categoria: "Granos",
+    categoria: "Alimentos/Otros",
     municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
@@ -1160,7 +1160,7 @@ const productos = [
   {
     id: 42,
     nombre: "Arroz Brasileño",
-    precio: 2.2,
+    precio: 2.20,
     imagen: "arroz1kg.png",
     description: "bolsa de 1 kg",
     categoria: "Granos",
@@ -1206,9 +1206,9 @@ const productos = [
   {
     id: 45,
     nombre: "Cartón de huevos",
-    precio: 10.20,
+    precio: 11.0,
     imagen: "huevo.png",
-    description: "30 uds frescos 100 % orgánicos",
+    description: "frescos 100 % orgánicos",
     categoria: "Productos mixtos",
     municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
@@ -1252,7 +1252,7 @@ const productos = [
     nombre: "Yogurt Probiótico",
     precio: 13.5,
     imagen: "yogurt.png",
-    description: "Cubeta de 4L",
+    description: " 1L",
     categoria: "Alimentos/Lácteos",
     municipios: [, 4, 5, 6, 7, 8, 9, 10, 11, 
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
@@ -1261,7 +1261,7 @@ const productos = [
   {
     id:135 ,
     nombre: "Yogurt de Vasito De Fresa",
-    precio: 2.65,
+    precio: 2.50,
     imagen: "yoqo.png",
     description: "Pack de 4 Vasitos de 125 gr",
     categoria: "Alimentos/Lácteos",
