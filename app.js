@@ -358,7 +358,7 @@ const productos = [
   {
     id: 2,
     nombre: "Caja de Pollo",
-    precio: 52,
+    precio: 32,
     imagen: "pollocaja.png",
     description: "caja de 40 lb de muslo y contramuslo 4 paquetes de 10 lb",
     categoria: "Alimentos/Cárnicos",
@@ -371,7 +371,7 @@ const productos = [
   {
     id: 75,
     nombre: "Caja de Pollo",
-    precio: 49,
+    precio: 42,
     imagen: "caja33lbpollo.png",
     description: "caja de 33 lb de muslo y contramuslo 3 paquetes de 11 lb",
     categoria: "Alimentos/Cárnicos",
@@ -503,7 +503,7 @@ const productos = [
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
   },
-  {
+/*  {
     id: 12,
     nombre: "Humaré",
     precio: 1.4,
@@ -512,8 +512,8 @@ const productos = [
     categoria: "Alimentos/Cárnicos",
     reciente  : 1, 
     municipios: [ 4, 5, 6, 7, 8, 9, 10, 11, ,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
-  },
-  {
+  }, */
+/*  {
     id: 134,
     nombre: "Mortadela de pollo Seara",
     precio: 2.30,
@@ -522,7 +522,7 @@ const productos = [
     categoria: "Alimentos/Cárnicos",
     reciente  : 1, 
     municipios: [ 4, 5, 6, 7, 8, 9, 10, 11, ,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
-  },
+  }, */
   {
     id: 13,
     nombre: "Picadillo de pollo",
@@ -830,7 +830,7 @@ const productos = [
     ]
   },
 
-  {
+/*  {
     id: 127,
     nombre: "Maíz dulce en granos  ",
     precio: 1.70,
@@ -841,7 +841,7 @@ const productos = [
     municipios: [1,2,3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
-  },
+  }, */
   {
     id: 80,
     nombre: "Jugo de Naranja Agria Badia ",
@@ -929,7 +929,7 @@ const productos = [
   {
     id: 87,
     nombre: "Botella de Aceite",
-    precio: 3.20,
+    precio: 2.80,
     imagen: "aceite.png",
     description: "Botella  de 1 L ",
     categoria: "Aderezo y condimentos",
