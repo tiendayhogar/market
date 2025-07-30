@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', setMobileViewport);
 window.addEventListener('resize', setMobileViewport);
 // Tasa de cambio: 1 USD equivale a 340.0 CUP (ajusta según necesites)
 
-const tasaCambio = 380.0;
+const tasaCambio = 340.0;
 
 // Ubicaciones disponibles
 const ubicaciones = {
@@ -828,7 +828,20 @@ const productos = [
     municipios: [ 4, 5, 6, 7, 8, 9, 10, 11,
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
     ]
-  
+  },
+
+  {
+    id: 127,
+    nombre: "Maíz dulce en granos  ",
+    precio: 1.70,
+    imagen: "maizdulce.png",
+    description: "lata de 445 gr ",
+    categoria: "Enlatados y conservas",
+    reciente: 1,
+    municipios: [1,2,3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,
+      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
+    ]
+  },
   {
     id: 80,
     nombre: "Jugo de Naranja Agria Badia ",
@@ -2114,7 +2127,7 @@ function renderizarListaProductos(listaProductos, contenedor = productosContaine
         <div class="etiqueta-categoria ${categoriaSinBarra}">${prod.categoria}</div>
         <img src="images/${prod.imagen}" alt="${prod.nombre}" loading="lazy">
         <h3>${prod.nombre}</h3>
-        <a href="https://wa.me/5353933247?text=${encodeURIComponent("Me interesa una cotización para " + prod.nombre)}" 
+        <a href="https://wa.me/5354642589?text=${encodeURIComponent("Me interesa una cotización para " + prod.nombre)}" 
            target="_blank" class="btn-cotizacion">Cotización del Servicio</a>
       `;
     } else {
