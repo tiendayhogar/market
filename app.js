@@ -358,7 +358,7 @@ const productos = [
   {
     id: 2,
     nombre: "Caja de Pollo",
-    precio: 32,
+    precio: 35,56
     imagen: "pollocaja.png",
     description: "caja de 40 lb de muslo y contramuslo 4 paquetes de 10 lb",
     categoria: "Alimentos/Cárnicos",
@@ -371,7 +371,7 @@ const productos = [
   {
     id: 75,
     nombre: "Caja de Pollo",
-    precio: 42,
+    precio: 46,67
     imagen: "caja33lbpollo.png",
     description: "caja de 33 lb de muslo y contramuslo 3 paquetes de 11 lb",
     categoria: "Alimentos/Cárnicos",
@@ -807,7 +807,7 @@ const productos = [
   {
     id: 130,
     nombre: "Café La Llave ",
-    precio: 6.9,
+    precio: 8.0,
     imagen: "lallave.png",
     description: "Paquete de 283 gr",
     categoria: "Alimentos/Líquidos",
@@ -1116,7 +1116,7 @@ const productos = [
   {
     id: 38,
     nombre: "Frijol Negro ",
-    precio: 8,
+    precio: 10,
     imagen: "frijol5lb.png",
     description: "bolsa de 5 Lb",
     categoria: "Granos",
@@ -1127,7 +1127,7 @@ const productos = [
   {
     id: 39,
     nombre: "Frijol Negro ",
-    precio: 3.2,
+    precio: 1.50,
     imagen: "frijol1kg.png",
     description: "bolsa de 1 kg",
     categoria: "Granos",
@@ -1160,7 +1160,7 @@ const productos = [
   {
     id: 42,
     nombre: "Arroz Brasileño",
-    precio: 2.2,
+    precio: 2.20,
     imagen: "arroz1kg.png",
     description: "bolsa de 1 kg",
     categoria: "Granos",
@@ -1206,7 +1206,7 @@ const productos = [
   {
     id: 45,
     nombre: "Cartón de huevos",
-    precio: 10.20,
+    precio: 11.0,
     imagen: "huevo.png",
     description: "30 uds frescos 100 % orgánicos",
     categoria: "Productos mixtos",
