@@ -396,7 +396,7 @@ const productos = [
     id: 77,
     nombre: "Paquete de pollo 11 lb ",
     precio: 14,
-    imagen: "pollopqte11.jpg",
+    imagen: "pollopqte11.png",
     description: "paquete de 11 lb de muslo y contra muslo",
     categoria: "Alimentos/Cárnicos",
     municipios: [1, 2, 3, 12, 13,
@@ -683,7 +683,7 @@ const productos = [
     id: 23,
     nombre: "Malta Guajira",
     precio: 6.00,
-    imagen: "guajira.jpg",
+    imagen: "guajira.png",
     description: "Blister de 6 uds de 500 ml",
     categoria: "Alimentos/Líquidos",
     municipios: [1, 2, 3,  12, 13,
@@ -785,7 +785,7 @@ const productos = [
     id: 30,
     nombre: "Café",
     precio: 5.9,
-    imagen: "cafearoma.jpg",
+    imagen: "cafearoma.png",
     description: "Paquete de 250 gr",
     categoria: "Alimentos/Líquidos",
     municipios: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
@@ -1738,7 +1738,7 @@ const productos = [
     reciente: 1, // Marcar como reciente
     
   },
-   {
+/*   {
     id: 120,
     nombre: "Galletas Maxi 2000",
     precio: 2.60,
@@ -1748,7 +1748,7 @@ const productos = [
     municipios: [1,2,3, 4, 5, 6, 7, 8, 9, 10, 11,12,13,14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27],
     reciente: 1, // Marcar como reciente
     
-  },
+  }, */
    {
     id: 121,
     nombre: "Bombom Truffle de Chocolate",
